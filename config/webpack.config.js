@@ -23,6 +23,9 @@ const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
+
+const autoprefixer = require('autoprefixer');
+
 function resolve(dir) {
   return path.join(__dirname, '..', dir);
 }
@@ -40,8 +43,8 @@ const useTypeScript = fs.existsSync(paths.appTsConfig);
 // style files regexes
 const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
-const sassRegex = /\.(scss|sass)$/;
-const sassModuleRegex = /\.module\.(scss|sass)$/;
+const lessRegex = /\.less$/;
+const lessModuleRegex = /\.module\.less$/;
 
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
@@ -124,8 +127,7 @@ module.exports = function (webpackEnv) {
     devtool: isEnvProduction ?
       shouldUseSourceMap ?
       'source-map' :
-      false :
-      isEnvDevelopment && 'cheap-module-source-map',
+      false : isEnvDevelopment && 'cheap-module-source-map',
     // These are the "entry points" to our application.
     // This means they will be the "root" imports that are included in JS bundle.
     entry: [
@@ -155,12 +157,10 @@ module.exports = function (webpackEnv) {
       // There will be one main bundle, and one file per asynchronous chunk.
       // In development, it does not produce real files.
       filename: isEnvProduction ?
-        'static/js/[name].[contenthash:8].js' :
-        isEnvDevelopment && 'static/js/bundle.js',
+        'static/js/[name].[contenthash:8].js' : isEnvDevelopment && 'static/js/bundle.js',
       // There are also additional JS chunk files if you use code splitting.
       chunkFilename: isEnvProduction ?
-        'static/js/[name].[contenthash:8].chunk.js' :
-        isEnvDevelopment && 'static/js/[name].chunk.js',
+        'static/js/[name].[contenthash:8].chunk.js' : isEnvDevelopment && 'static/js/[name].chunk.js',
       // We inferred the "public path" (such as / or /my-project) from homepage.
       // We use "/" in development.
       publicPath: publicPath,
@@ -169,8 +169,7 @@ module.exports = function (webpackEnv) {
         info =>
         path
         .relative(paths.appSrc, info.absoluteResourcePath)
-        .replace(/\\/g, '/') :
-        isEnvDevelopment &&
+        .replace(/\\/g, '/') : isEnvDevelopment &&
         (info => path.resolve(info.absoluteResourcePath).replace(/\\/g, '/')),
     },
     optimization: {
@@ -223,16 +222,14 @@ module.exports = function (webpackEnv) {
         new OptimizeCSSAssetsPlugin({
           cssProcessorOptions: {
             parser: safePostCssParser,
-            map: shouldUseSourceMap ?
-              {
-                // `inline: false` forces the sourcemap to be output into a
-                // separate file
-                inline: false,
-                // `annotation: true` appends the sourceMappingURL to the end of
-                // the css file, helping the browser find the sourcemap
-                annotation: true,
-              } :
-              false,
+            map: shouldUseSourceMap ? {
+              // `inline: false` forces the sourcemap to be output into a
+              // separate file
+              inline: false,
+              // `annotation: true` appends the sourceMappingURL to the end of
+              // the css file, helping the browser find the sourcemap
+              annotation: true,
+            } : false,
           },
         }),
       ],
@@ -429,17 +426,17 @@ module.exports = function (webpackEnv) {
                 getLocalIdent: getCSSModuleLocalIdent,
               }),
             },
-            // Opt-in support for SASS (using .scss or .sass extensions).
-            // By default we support SASS Modules with the
-            // extensions .module.scss or .module.sass
+            // Opt-in support for LESS (using .scss or .less extensions).
+            // By default we support LESS Modules with the
+            // extensions .module.scss or .module.less
             {
-              test: sassRegex,
-              exclude: sassModuleRegex,
+              test: lessRegex,
+              exclude: lessModuleRegex,
               use: getStyleLoaders({
                   importLoaders: 2,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                 },
-                'sass-loader'
+                'less-loader'
               ),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
@@ -447,17 +444,17 @@ module.exports = function (webpackEnv) {
               // See https://github.com/webpack/webpack/issues/6571
               sideEffects: true,
             },
-            // Adds support for CSS Modules, but using SASS
-            // using the extension .module.scss or .module.sass
+            // Adds support for CSS Modules, but using LESS
+            // using the extension .module.scss or .module.less
             {
-              test: sassModuleRegex,
+              test: lessModuleRegex,
               use: getStyleLoaders({
                   importLoaders: 2,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                   modules: true,
                   getLocalIdent: getCSSModuleLocalIdent,
                 },
-                'sass-loader'
+                'less-loader'
               ),
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.
@@ -489,8 +486,7 @@ module.exports = function (webpackEnv) {
             inject: true,
             template: paths.appHtml,
           },
-          isEnvProduction ?
-          {
+          isEnvProduction ? {
             minify: {
               removeComments: true,
               collapseWhitespace: true,
