@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
 //引入路由文件
-import Admin from './router';
+import IRouter from './router';
 
-ReactDOM.render(<Admin />, document.getElementById('root'));
+ReactDOM.render(<IRouter />, document.getElementById('root'));
  
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

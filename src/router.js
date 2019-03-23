@@ -13,14 +13,13 @@ export default class IRouter extends Component {
     return (
         <HashRouter>
           <App>
-            <Switch>
+            {/* <Switch>
               <Route path="/login" component= {Login}/>
               <Route path="/" exact component= {App}/>
               <Route path="/error" component= {NotFound}/>
               <Route path="/ui/modals" component= {Modals}/>
-
               <Redirect to="/error"/>
-            </Switch>
+            </Switch> */}
           </App>
       </HashRouter>
     );
