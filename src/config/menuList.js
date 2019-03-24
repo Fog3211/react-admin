@@ -1,39 +1,37 @@
-export default  [
-    {
+export default [{
         title: '首页',
         key: '/home'
     },
     {
         title: 'UI',
         key: '/ui',
-        children: [
-            {
+        children: [{
                 title: '按钮',
                 key: '/ui/buttons',
             },
             {
                 title: '弹框',
-                key:'/ui/modals',
+                key: '/ui/modals',
             },
             {
                 title: 'Loading',
-                key:'/ui/loadings',
+                key: '/ui/loadings',
             },
             {
                 title: '通知提醒',
-                key:'/ui/notification',
+                key: '/ui/notification',
             },
             {
                 title: '全局Message',
-                key:'/ui/messages',
+                key: '/ui/messages',
             },
             {
                 title: 'Tab页签',
-                key:'/ui/tabs',
+                key: '/ui/tabs',
             },
             {
                 title: '图片画廊',
-                key:'/ui/gallery',
+                key: '/ui/gallery',
             },
             {
                 title: '轮播图',
@@ -44,8 +42,7 @@ export default  [
     {
         title: '表单',
         key: '/form',
-        children: [
-            {
+        children: [{
                 title: '登录',
                 key: '/form/login',
             },
@@ -58,8 +55,7 @@ export default  [
     {
         title: '表格',
         key: '/table',
-        children: [
-            {
+        children: [{
                 title: '基础表格',
                 key: '/table/basic',
             },
@@ -80,8 +76,7 @@ export default  [
     {
         title: '订单管理',
         key: '/order',
-        btnList: [
-            {
+        btnList: [{
                 title: '订单详情',
                 key: '/detail'
             },
@@ -102,8 +97,7 @@ export default  [
     {
         title: '图标',
         key: '/charts',
-        children: [
-            {
+        children: [{
                 title: '柱形图',
                 key: '/charts/bar'
             },
@@ -121,5 +115,4 @@ export default  [
         title: '权限设置',
         key: '/permission'
     },
-  ];
-  
+];

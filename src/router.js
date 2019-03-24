@@ -3,9 +3,9 @@ import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import asyncComponent from '@/utils/asyncComponent';
 
 const App = asyncComponent(() => import("@/App"))
-const Login = asyncComponent(() => import("_p/login/Login"))
-const NotFound = asyncComponent(() => import("_p/notfound/NotFound"))
-const Modals = asyncComponent(() => import("_p/ui/Modals"))
+// const Login = asyncComponent(() => import("_p/login/Login"))
+// const NotFound = asyncComponent(() => import("_p/notfound/NotFound"))
+// const Modals = asyncComponent(() => import("_p/ui/Modals"))
 
 
 export default class IRouter extends Component {
