@@ -1,26 +1,32 @@
 import React, { Component } from "react";
-import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import asyncComponent from '@/utils/asyncComponent';
 
-const App = asyncComponent(() => import("@/App"))
-// const Login = asyncComponent(() => import("_p/login/Login"))
-// const NotFound = asyncComponent(() => import("_p/notfound/NotFound"))
-// const Modals = asyncComponent(() => import("_p/ui/Modals"))
+const App = asyncComponent(() => import("@/App"));
+const Login = asyncComponent(() => import("_p/login/Login"));
+const Modals = asyncComponent(() => import("_p/ui/Modals"));
+const Home = asyncComponent(() => import("_p/home/Home"));
+const Account = asyncComponent(() => import("_p/account/Account"));
 
 
 export default class IRouter extends Component {
   render() {
     return (
         <HashRouter>
-          <App>
-            {/* <Switch>
-              <Route path="/login" component= {Login}/>
-              <Route path="/" exact component= {App}/>
-              <Route path="/error" component= {NotFound}/>
-              <Route path="/ui/modals" component= {Modals}/>
-              <Redirect to="/error"/>
-            </Switch> */}
-          </App>
+          <Switch>
+            <Route path="/login" component= {Login}></Route>
+            <Route path="/account" component= {Account}/>
+            <Route path="/" render={()=>(
+              <App>
+                <Switch>
+                  <Route path="/modals" component= {Modals}/>
+                  {/* 没有匹配则重定向到首页 */}
+                  <Route component={Home}/>
+                </Switch>
+              </App>
+            )}>
+            </Route>
+          </Switch>
       </HashRouter>
     );
   }

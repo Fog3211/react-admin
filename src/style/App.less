@@ -1,4 +1,5 @@
 .container {
+    overflow: hidden;
     padding-top: 80px;
 
     .header {
@@ -11,16 +12,19 @@
         background-color: #002140;
     }
 
-    .left-nav {
-        max-width: 300px;
-          // 运算符后面注意空格
-        height: calc(100vh - 80px);
-        background-color:#001529;
+    .main {
+        overflow: auto;
+
+        .left-nav {
+            // 运算符后面注意空格
+            height: calc(100vh - 80px);
+            background-color: #001529;
+        }
+
+        .content {
+            width: 100%;
+            height: calc(100vh- 80px);
+        }
     }
 
-    .content {
-        width: 100%;
-        height: calc(100vh-80px);
-        background-color: aquamarine;
-    }
 }

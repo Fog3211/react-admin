@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './Header.less';
 import logo from '@/assets/logo.svg';
+import { Redirect } from 'react-router';
 
 export default class Header extends Component {
     goHome=()=>{
-        console.log("返回主页");
+        return (<Redirect to="/login" />)
     }
     render() {
         return (
@@ -15,7 +16,6 @@ export default class Header extends Component {
                 </div>
                 <div className="user">
                     <span>欢迎您，{}</span>
-                    <a href="#1">退出</a>
                 </div>
             </div>
         );
