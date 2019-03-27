@@ -1,38 +1,75 @@
-.account-container{
-    width:1000px;
-    background-color: rgb(241, 238, 238);
-    margin: 30px auto 0;
-    padding: 40px 100px;
-    .account-header{
-        font-size: 30px;
-        color: rgb(114, 112, 112);
-        padding-bottom: 20px;
-        border-bottom: 2px solid black; 
-        span{
-            padding: 10px 0 0 10px;
-        }
-    }
-    .profile{
-        margin-top: 40px;
-        width: 100%;
-        padding: 20px 0 50px;
-        &-title{
+.account-container {
+    padding-top: 20px;
+
+    .profile {
+        width: 1000px;
+        background-color: rgb(245, 245, 245);
+        margin: 30px auto 0;
+        padding: 40px 100px;
+
+        &-title {
             font-size: 20px;
-            padding-bottom:10px; 
+            padding-bottom: 10px;
             border-bottom: 2px solid #ccc;
         }
-        &-detail{
+
+        &-detail {
             margin-top: 20px;
-        }
-    }
-    .setting{
-        margin-top: 40px;
-        width: 100%;
-        padding: 20px 0 50px;
-        &-title{
-            font-size: 20px;
-            padding-bottom:10px; 
-            border-bottom: 2px solid #ccc;
+
+            .avatar-box {
+                .avatar-title {
+                    font-size: 16px;
+                    padding-right: 30px;
+                }
+
+                .avatar {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            .sex-title {
+                padding-right: 30px;
+            }
+
+            .name-box {
+                .name-title {
+                    font-size: 16px;
+                    padding-right: 30px;
+                }
+
+                .name {
+                    font-size: 20px;
+                    padding-right: 50px;
+                }
+
+                .name-btn {
+                    cursor: pointer;
+                    color: #108ee9;
+                }
+            }
+
+            .birthday-box {
+                .birthday-title {
+                    font-size: 16px;
+                    padding-right: 30px;
+                }
+
+                .birthday {
+                    cursor: pointer;
+                }
+            }
+
+            .btn-group {
+                display: flex;
+                width: 300px;
+                margin-top: 50px;
+
+                .handle-btn {
+                    margin: 0 40px;
+                }
+            }
+
         }
     }
 }

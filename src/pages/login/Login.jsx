@@ -7,11 +7,10 @@ const RadioGroup = Radio.Group;
 
 class Login extends Component {
     state = {
-        value: 1,
+        value: 0,
     };
 
     onChange = (e) => {
-        console.log('radio checked', e.target.value);
         this.setState({
             value: e.target.value,
         });
@@ -76,8 +75,8 @@ class Login extends Component {
                                 onChange={this.onChange}
                                 value={this.state.value}
                             >
-                                <Radio value={1}>学生</Radio>
-                                <Radio value={2}>教师</Radio>
+                                <Radio value={0}>学生</Radio>
+                                <Radio value={1}>教师</Radio>
                             </RadioGroup>
                             <a href='/home' style={{float:'right'}} className="visit">游客登录</a>
                         </FormItem>
