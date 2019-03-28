@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu } from 'antd';
+import { Menu, Icon } from 'antd';
 
 import menuList from '@/config/menuList';
 import './LeftNav.less';
@@ -34,7 +34,10 @@ export default class LeftNav extends Component {
             //渲染最后的节点
             return (
                 <Menu.Item key={item.key}>
-                    <NavLink to={item.key}>{item.title}</NavLink>
+                    <NavLink to={item.key}>
+                        {/* <Icon type="pie-chart" /> */}
+                        {item.title}
+                    </NavLink>
                 </Menu.Item>
             );
         });
@@ -42,7 +45,9 @@ export default class LeftNav extends Component {
     render() {
         return (
             <div className="left-nav">
-                <Menu theme="dark" mode="inline">{this.state.menuTreeNode}</Menu>
+                <Menu theme="dark" mode="inline">
+                    {this.state.menuTreeNode}
+                </Menu>
             </div>
         );
     }

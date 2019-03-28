@@ -1,81 +1,47 @@
 export default [{
-        title: '首页',
-        key: '/home'
+        title: '全局总览',
+        key: '/overview',
     },
     {
-        title: 'UI',
-        key: '/ui',
+        title: '成员管理',
+        key: '/member',
+    },
+    {
+        title: '成果汇总',
+        key: '/achievement',
         children: [{
-                title: '按钮',
-                key: '/ui/buttons',
+                title: '论文',
+                key: '/achievement/dissertation',
             },
             {
-                title: '弹框',
-                key: '/ui/modals',
+                title: '纵向课题',
+                key: '/achievement/longitudinal-topic',
             },
             {
-                title: 'Loading',
-                key: '/ui/loadings',
+                title: '横向课题',
+                key: '/achievement/horizontal-topic',
             },
             {
-                title: '通知提醒',
-                key: '/ui/notification',
+                title: '专利',
+                key: '/achievement/patent',
             },
             {
-                title: '全局Message',
-                key: '/ui/messages',
+                title: '个人获奖',
+                key: '/achievement/individual-award',
             },
             {
-                title: 'Tab页签',
-                key: '/ui/tabs',
-            },
-            {
-                title: '图片画廊',
-                key: '/ui/gallery',
-            },
-            {
-                title: '轮播图',
-                key: '/ui/carousel',
+                title: '团队获奖',
+                key: '/achievement/team-award',
             }
         ]
     },
     {
-        title: '表单',
-        key: '/form',
-        children: [{
-                title: '登录',
-                key: '/form/login',
-            },
-            {
-                title: '注册',
-                key: '/form/reg',
-            }
-        ]
-    },
-    {
-        title: '表格',
-        key: '/table',
-        children: [{
-                title: '基础表格',
-                key: '/table/basic',
-            },
-            {
-                title: '高级表格',
-                key: '/table/high',
-            }
-        ]
-    },
-    {
-        title: '富文本',
-        key: '/rich'
-    },
-    {
-        title: '城市管理',
+        title: '材料生成',
         key: '/city'
     },
     {
-        title: '订单管理',
-        key: '/order',
+        title: '系统设置',
+        key: '/setting',
         btnList: [{
                 title: '订单详情',
                 key: '/detail'
@@ -85,34 +51,5 @@ export default [{
                 key: '/finish'
             }
         ]
-    },
-    {
-        title: '员工管理',
-        key: '/user'
-    },
-    {
-        title: '车辆地图',
-        key: '/bikeMap'
-    },
-    {
-        title: '图标',
-        key: '/charts',
-        children: [{
-                title: '柱形图',
-                key: '/charts/bar'
-            },
-            {
-                title: '饼图',
-                key: '/charts/pie'
-            },
-            {
-                title: '折线图',
-                key: '/charts/line'
-            },
-        ]
-    },
-    {
-        title: '权限设置',
-        key: '/permission'
     },
 ];

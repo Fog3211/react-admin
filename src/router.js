@@ -4,7 +4,6 @@ import asyncComponent from '@/utils/asyncComponent';
 
 const App = asyncComponent(() => import("@/App"));
 const Login = asyncComponent(() => import("_p/login/Login"));
-const Modals = asyncComponent(() => import("_p/ui/Modals"));
 const Home = asyncComponent(() => import("_p/home/Home"));
 const Account = asyncComponent(() => import("_p/account/Account"));
 
@@ -19,7 +18,7 @@ export default class IRouter extends Component {
             <Route path="/" render={()=>(
               <App>
                 <Switch>
-                  <Route path="/modals" component= {Modals}/>
+                  {/* <Route path="/modals" component= {Modals}/> */}
                   {/* 没有匹配则重定向到首页 */}
                   <Route component={Home}/>
                 </Switch>
