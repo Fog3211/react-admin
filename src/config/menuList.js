@@ -37,19 +37,31 @@ export default [{
     },
     {
         title: '材料生成',
-        key: '/city'
+        key: '/material',
+        children: [{
+            title: '新建材料',
+            key: '/material/new',
+        },
+        {
+            title: '历史材料',
+            key: '/material/finish',
+        }]
+    },
+    {
+        title: '可视化展示',
+        key: '/display',
     },
     {
         title: '系统设置',
         key: '/setting',
-        btnList: [{
-                title: '订单详情',
-                key: '/detail'
+        children: [{
+                title: '团队信息',
+                key: '/setting/team-message'
             },
             {
-                title: '结束订单',
-                key: '/finish'
+                title: '团队设置',
+                key: '/setting/team-setting'
             }
         ]
-    },
+    }
 ];

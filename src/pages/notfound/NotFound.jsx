@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import { Button } from 'antd';
+import img from '@/assets/404.png';
 
-import './NotFound.less';
-
-export default class Error extends Component {
+class NotFound extends Component {
+    state = {
+        animated: ''
+    };
+    enter = () => {
+        this.setState({animated: 'hinge'})
+    };
     render() {
         return (
-            <div>
-                <Button type="primary">Primary</Button>
-                <Button>Default</Button>
-                <Button type="dashed">Dashed</Button>
-                <Button type="danger">Danger</Button>
+            <div className="not-found">
+                <img src={img} alt="404" className={`animated swing ${this.state.animated}`} onMouseEnter={this.enter} />
             </div>
-        );
+        )
     }
 }
+
+export default NotFound;

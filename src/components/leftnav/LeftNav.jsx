@@ -35,7 +35,7 @@ export default class LeftNav extends Component {
             return (
                 <Menu.Item key={item.key}>
                     <NavLink to={item.key}>
-                        {/* <Icon type="pie-chart" /> */}
+                        <Icon type="pie-chart" />
                         {item.title}
                     </NavLink>
                 </Menu.Item>
