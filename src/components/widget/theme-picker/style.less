@@ -1,0 +1,23 @@
+.switcher {
+    position: fixed;
+    z-index: 1050;
+    top: 78px;
+    right: -240px;
+    width: 240px;
+    transition: right 0.2s ease;
+    border: 1px solid rgba(120, 120, 120, 0.1);
+    cursor: pointer;
+    &.active {
+      right: -15px;
+    }
+    .sw-btn {
+      position: absolute;
+      left: -43px;
+      top: -1px;
+      padding: 10px 15px;
+      z-index: 1045;
+      border: 1px solid rgba(120, 120, 120, 0.3);
+      border-right: 0;
+      border-radius: 4px;
+    }
+  }

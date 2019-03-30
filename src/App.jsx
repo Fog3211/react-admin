@@ -1,24 +1,50 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'antd';
+import Routes from './router/index';
+import DocumentTitle from 'react-document-title';
+import { Layout, Icon } from 'antd';
 import LeftNav from '_c/leftnav/LeftNav';
-import Header from '_c/header/Header';
+import Header from '_c/header';
+import ThemePicker from '_c/widget/theme-picker';
 import '@/style/App.less';
+
+const { Content, Footer } = Layout;
 
 // 引入所有的子路由
 export default class App extends Component {
+    state = {
+        collapsed: false,
+        title: '',
+    };
+    toggle = () => {
+        this.setState({
+            collapsed: !this.state.collapsed,
+        });
+    };
+    setTitle = (title) => {
+        this.setState({title});
+    };
     render() {
+        const { collapsed, title } = this.state;
+        const { auth = { data: {} }, responsive = { data: {} } } = this.props;
         return (
-            <div className="container">
-                <Header className="header" />
-                <Row className="main">
-                    <Col span={4}>
-                        <LeftNav className="left-nav" />
-                    </Col>
-                    <Col span={20} className="main">
-                        <Row className="content">{this.props.children}</Row>
-                    </Col>
-                </Row>
-            </div>
+            <DocumentTitle title={title}>
+                <Layout>
+                    <ThemePicker />
+                    <Layout>
+                        <Header
+                            toggle={this.toggle}
+                            collapsed={collapsed}
+                            user={auth.data || {}}
+                        />
+                        {/* <Content style={{ margin: '0 16px', overflow: 'initial', flex: '1 1 0' }}>
+                            <Routes auth={auth} onRouterChange={this.setTitle} />
+                        </Content> */}
+                        <Footer className="footer">
+                            React-Admin © 2019 Created by Fog3211
+                        </Footer>
+                    </Layout>
+                </Layout>
+            </DocumentTitle>
         );
     }
 }
