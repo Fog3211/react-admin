@@ -14,16 +14,26 @@ const SubMenu = Menu.SubMenu;
 
 class MyHeader extends Component {
     state = {
-        visible: '',
+        visible: false,
     };
     handleVisibleChange = (visible) => {
         this.setState({ visible });
     };
-    logout = () => {
+    popoverHide = () => {
+        this.setState({
+            visible: false,
+        });
+    };
+    toggleScreenFull = () => {
+        if (screenfull.enabled) {
+            screenfull.toggle();
+        }
+    };
+    logOut = () => {
         return <Redirect to="/login" />;
     };
     render() {
-        const { responsive = { data: {} }, path } = this.props;
+        const { responsive = { data: {} }, path, collapsed, toggle} = this.props;
         const { visible } = this.state;
         return (
             <Header className="header">
@@ -49,14 +59,14 @@ class MyHeader extends Component {
                     <Icon
                         className="header-trigger"
                         type={
-                            this.props.collapsed ? 'menu-unfold' : 'menu-fold'
+                            collapsed ? 'menu-unfold' : 'menu-fold'
                         }
-                        onClick={this.props.toggle}
+                        onClick={toggle}
                     />
                 )}
                 <Menu mode="horizontal" className="header-menu">
-                    <Menu.Item key="full" onClick={this.screenFull}>
-                        <Icon type="arrows-alt" className="full-btn" />
+                    <Menu.Item key="full" onClick={this.toggleScreenFull}>
+                        <Icon type="fullscreen" className="full-btn" />
                     </Menu.Item>
 
                     {responsive.data.isMobile ? (
@@ -65,7 +75,7 @@ class MyHeader extends Component {
                         <Menu.Item key="welcome">
                             <span className="welcome">
                                 你好 - {this.props.user.userName}
-                            </span>{' '}
+                            </span>
                         </Menu.Item>
                     )}
 
@@ -74,7 +84,7 @@ class MyHeader extends Component {
                     >
                         <Menu.Item key="setting">个人信息</Menu.Item>
                         <Menu.Item key="logout">
-                            <span onClick={this.logout}>退出登录</span>
+                            <span onClick={this.logOut}>退出登录</span>
                         </Menu.Item>
                     </SubMenu>
                 </Menu>
