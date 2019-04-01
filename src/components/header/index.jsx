@@ -6,15 +6,15 @@ import screenfull from 'screenfull';
 import { withRouter } from 'react-router-dom';
 // import { connectAlita } from 'redux-alita';
 import './style.less';
-import logo from '@/assets/logo.svg';
 import avater from '@/assets/head.png';
+import logo from '@/assets/logo.svg';
 
 const { Header } = Layout;
 const SubMenu = Menu.SubMenu;
 
 class MyHeader extends Component {
     state = {
-        visible: false,
+        visible: false
     };
     handleVisibleChange = (visible) => {
         this.setState({ visible });
@@ -33,11 +33,14 @@ class MyHeader extends Component {
         return <Redirect to="/login" />;
     };
     render() {
-        const { responsive = { data: {} }, path, collapsed, toggle} = this.props;
+        const {
+            responsive = { data: {} },
+            path
+        } = this.props;
         const { visible } = this.state;
         return (
             <Header className="header">
-                {!responsive.data.isMobile ? (
+                {responsive.data.isMobile ? (
                     <Popover
                         content={
                             <SiderCustom
@@ -56,13 +59,10 @@ class MyHeader extends Component {
                         />
                     </Popover>
                 ) : (
-                    <Icon
-                        className="header-trigger"
-                        type={
-                            collapsed ? 'menu-unfold' : 'menu-fold'
-                        }
-                        onClick={toggle}
-                    />
+                        <span className="logo-box">
+                            <img src={logo} alt="logo" className="logo" />
+                            <span>React-Admin</span>
+                        </span>
                 )}
                 <Menu mode="horizontal" className="header-menu">
                     <Menu.Item key="full" onClick={this.toggleScreenFull}>
