@@ -7,8 +7,15 @@ import './style.less';
 export default class ThemePicker extends Component {
     state = {
         switcherOn: false,
-        background: localStorage.getItem('@primary-color') || '#313653',
+        background: '#313653',
     };
+    componentWillMount() {
+        const background_color =
+            localStorage.getItem('@primary-color') || '#313653';
+        this.setState({
+            background: background_color,
+        });
+    }
     switcherOn = () => {
         this.setState({
             switcherOn: !this.state.switcherOn,
@@ -17,9 +24,10 @@ export default class ThemePicker extends Component {
     handleChangeComplete = (color) => {
         this.setState({ background: color.hex });
         localStorage.setItem('@primary-color', color.hex);
-        // window.less.modifyVars({
-        //     '@primary-color': color.hex,
-        // })
+        // console.log(color.hex);
+        window.less.modifyVars({
+            '@primary-color': color.hex,
+        });
     };
     render() {
         const { switcherOn, background } = this.state;

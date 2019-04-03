@@ -4,7 +4,6 @@ import { Menu, Icon, Layout, Popover } from 'antd';
 import SiderCustom from '_c/widget/sider-custom';
 import screenfull from 'screenfull';
 import { withRouter } from 'react-router-dom';
-// import { connectAlita } from 'redux-alita';
 import './style.less';
 import avater from '@/assets/head.png';
 import logo from '@/assets/logo.svg';
