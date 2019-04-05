@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import { Menu, Icon, Layout, Popover } from 'antd';
-import SiderCustom from '_c/widget/sider-custom';
+import SiderCustom from '_c/sider-custom';
 import screenfull from 'screenfull';
 import { withRouter } from 'react-router-dom';
 import './style.less';
 import avater from '@/assets/head.png';
 import logo from '@/assets/logo.svg';
-
+ 
 const { Header } = Layout;
 const SubMenu = Menu.SubMenu;
 

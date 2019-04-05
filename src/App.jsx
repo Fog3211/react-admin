@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Routes from './router/index';
 import DocumentTitle from 'react-document-title';
 import { Layout, notification, Icon } from 'antd';
-import SiderCustom from '_c/widget/sider-custom';
+import SiderCustom from '_c/sider-custom';
 import Header from '_c/header';
-import ThemePicker from '_c/widget/theme-picker';
+import ThemePicker from '_c/theme-picker';
 import '@/style/App.less';
 import { connect } from 'react-redux';
 

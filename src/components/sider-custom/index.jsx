@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import { Layout } from 'antd';
 import routes from '@/router/config';
 import SiderMenu from './SiderMenu';
-import './style.less';
 
 const { Sider } = Layout;
 
@@ -65,7 +64,6 @@ class SiderCustom extends Component {
         const {collapsed}= this.props;
         return (
             <Sider
-                trigger={null}
                 breakpoint="lg"
                 collapsible
                 collapsed={collapsed}
