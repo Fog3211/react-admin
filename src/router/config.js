@@ -1,7 +1,7 @@
 export default {
-    menus: [ // 菜单相关路由
+    menus: [ 
         {
-            key: '/app/dashboard/index',
+            key: '/app/home',
             title: '首页',
             icon: 'mobile',
             component: 'Dashboard'
