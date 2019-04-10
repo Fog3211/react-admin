@@ -1,8 +1,8 @@
-import MapUi from './ui/map';
+import Test from './ui/test';
 
 
 
 
 export default{
-    MapUi
+    Test
 }

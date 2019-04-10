@@ -160,7 +160,7 @@ export default {
                     auth: 'auth/testPage'
                 },
             ],
-        }
+        },
     ],
     others: [] // 非菜单相关路由
 }
