@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, Form, Input, Button, message, Icon, Radio } from 'antd';
-import './Login.less';
+import './index.less';
 
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;

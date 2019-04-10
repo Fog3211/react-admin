@@ -61,8 +61,10 @@ class App extends Component {
                     marginRight: 10,
                 },
             });
+            sessionStorage.setItem('isFirst', true);
         };
-        openNotification();
+        const isFirst = sessionStorage.getItem('isFirst');
+        !isFirst && openNotification();
     }
     getClientWidth = () => {
         const cW = window.innerWidth;
@@ -94,7 +96,7 @@ class App extends Component {
                         )}
                         <Layout style={{ flexDirection: 'column' }}>
                             <Content className="content">
-                                {/* <Routes auth={auth} onRouterChange={this.setTitle} /> */}
+                                <Routes auth={auth} onRouterChange={this.setTitle} />
                             </Content>
                             <Footer className="footer">
                                 React-Admin © 2019 Created by Fog3211

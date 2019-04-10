@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Input, Button, DatePicker, Radio, Avatar } from 'antd';
-import './Account.less';
+import './index.less';
 import head from '@/assets/default-head.jpg';
 
 const FormItem = Form.Item;

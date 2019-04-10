@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Layout } from 'antd';
-import routes from '@/router/config';
+import menus from '@/router/config';
 import SiderMenu from './SiderMenu';
 
 const { Sider } = Layout;
@@ -33,7 +33,7 @@ class SiderCustom extends Component {
                 style={{ overflowY: 'auto' }}
             >
                 <SiderMenu
-                    menus={routes.menus}
+                    menus={menus}
                     onClick={this.menuClick}
                     selectedKeys={[this.state.selectedKey]}
                     mode="inline"

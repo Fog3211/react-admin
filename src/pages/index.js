@@ -1,8 +1,4 @@
-import Test from './ui/test';
-
-
-
-
-export default{
-    Test
+import Home from '_p/home';
+export default {
+    Home
 }

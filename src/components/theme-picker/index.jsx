@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { SketchPicker } from 'react-color';
 import { Icon } from 'antd';
 import classNames from 'classnames';
-import './style.less';
+import './index.less';
 
 export default class ThemePicker extends Component {
     state = {

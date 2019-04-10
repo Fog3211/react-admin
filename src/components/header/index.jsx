@@ -4,7 +4,7 @@ import { Menu, Icon, Layout, Popover } from 'antd';
 import SiderCustom from '_c/sider-custom';
 import screenfull from 'screenfull';
 import { withRouter } from 'react-router-dom';
-import './style.less';
+import './index.less';
 import avater from '@/assets/head.png';
 import logo from '@/assets/logo.svg';
  
@@ -34,7 +34,6 @@ class MyHeader extends Component {
     render() {
         const {
             responsive = { data: {} },
-            path
         } = this.props;
         const { visible } = this.state;
         return (
@@ -43,7 +42,6 @@ class MyHeader extends Component {
                     <Popover
                         content={
                             <SiderCustom
-                                path={path}
                                 popoverHide={this.popoverHide}
                             />
                         }
