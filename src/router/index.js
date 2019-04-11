@@ -19,6 +19,7 @@ export default class CRouter extends Component {
         return permission ? this.requireAuth(permission, component) : component;
     };
     render() {
+        const { onRouterChange } = this.props;
         return (
             <Switch>
                 {
@@ -32,6 +33,7 @@ export default class CRouter extends Component {
                                     key={r.key}
                                     path={r.key}
                                     render={() => {
+                                        onRouterChange && onRouterChange(r);
                                         return <Page/>;
                                     }}
                                 />

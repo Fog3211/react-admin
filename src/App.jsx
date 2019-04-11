@@ -7,6 +7,7 @@ import Header from '_c/header';
 import ThemePicker from '_c/theme-picker';
 import '@/style/App.less';
 import { connect } from 'react-redux';
+import BreadcrumbCustom from '_c/breadcrumb-custom';
 
 const { Content, Footer, Sider } = Layout;
 
@@ -16,6 +17,7 @@ class App extends Component {
         title: '',
     };
     componentWillMount() {
+        this.mounted = false;
         this.getClientWidth();
         window.onresize = () => {
             this.getClientWidth();
@@ -73,8 +75,12 @@ class App extends Component {
     onCollapse = (collapsed) => {
         this.setState({ collapsed });
     };
-    setTitle = (title) => {
-        this.setState({ title });
+    setTitle = ({ title }) => {
+        if (this.mounted === true) {
+            console.log(title);
+            if (this.state.title === title) return;
+            this.setState({ title });
+        }
     };
     render() {
         const { collapsed, title } = this.state;
@@ -96,7 +102,11 @@ class App extends Component {
                         )}
                         <Layout style={{ flexDirection: 'column' }}>
                             <Content className="content">
-                                <Routes auth={auth} onRouterChange={this.setTitle} />
+                                <BreadcrumbCustom first={title} />
+                                <Routes
+                                    auth={auth}
+                                    onRouterChange={this.setTitle}
+                                />
                             </Content>
                             <Footer className="footer">
                                 React-Admin © 2019 Created by Fog3211

@@ -94,23 +94,14 @@ const menus = [{
                 key: '/app/table/advancedTable',
                 title: '高级表格',
                 component: 'AdvancedTable'
-            },
-            {
-                key: '/app/table/asynchronousTable',
-                title: '异步表格',
-                component: 'AsynchronousTable'
-            },
+            }
         ],
     },
     {
         key: '/app/form',
         title: '表单',
         icon: 'edit',
-        subs: [{
-            key: '/app/form/basicForm',
-            title: '基础表单',
-            component: 'BasicForm'
-        }, ],
+        component: 'AllForm'
     },
     {
         key: '/app/chart',
