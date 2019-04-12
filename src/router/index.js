@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import AllPages from '@/pages';
 import routesConfig from './config';
+import BreadcrumbCustom from '_c/breadcrumb-custom';
 
 export default class CRouter extends Component {
     requireAuth = (permission, component) => {
@@ -19,12 +20,11 @@ export default class CRouter extends Component {
         return permission ? this.requireAuth(permission, component) : component;
     };
     render() {
-        const { onRouterChange } = this.props;
         return (
             <Switch>
                 {
                     routesConfig.map(r => {
-                        const route = r => {
+                        const route = (r,first_title) => {
                             const Page = AllPages[r.component];
                             if(Page){
                               return (
@@ -33,14 +33,17 @@ export default class CRouter extends Component {
                                     key={r.key}
                                     path={r.key}
                                     render={() => {
-                                        onRouterChange && onRouterChange(r);
-                                        return <Page/>;
+                                        return (<div>
+                                            {/* 面包屑标题导航 */}
+                                            <BreadcrumbCustom first={(first_title?first_title:r.title)==='首页'?'':(first_title?first_title:r.title)} second={first_title?r.title:''} />
+                                            <Page/>
+                                        </div>);
                                     }}
                                 />
                                 )  
                             }
                         }
-                        return r.component ? route(r) : r.subs.map(r => route(r));
+                        return r.component ? route(r) : r.subs.map((e) => route(e,r.title));
                     })
                 }
                 <Route render={() => <Redirect to="/404" />} />

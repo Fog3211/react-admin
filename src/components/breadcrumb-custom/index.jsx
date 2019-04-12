@@ -6,7 +6,7 @@ class BreadcrumbCustom extends Component {
     render() {
         const orgin = (
             <Breadcrumb.Item>
-                <Link to={'/app/home'}>首页</Link>
+                <Link to={'/app/home'}>主页</Link>
             </Breadcrumb.Item>
         );
         const first =
