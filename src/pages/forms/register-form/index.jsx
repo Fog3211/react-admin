@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {
     Form,
     Input,
@@ -129,7 +130,6 @@ class NormalRegisterForm extends Component {
         }
         this.setState({ autoCompleteResult });
     };
-
     render() {
         const { getFieldDecorator } = this.props.form;
         const { autoCompleteResult } = this.state;
@@ -315,8 +315,7 @@ class NormalRegisterForm extends Component {
                         ],
                     })(
                         <Checkbox>
-                            {/* 协议部分 */}
-                            我已经阅读过 <a href="/">协议</a>
+                            我已经阅读过 <Link to="/agreement">协议</Link>
                         </Checkbox>
                     )}
                 </Form.Item>
