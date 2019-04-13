@@ -1,102 +1,112 @@
-import React, { Component } from 'react';
-import { Card, Form, Input, Button, message, Icon, Radio } from 'antd';
+import React, {Component} from 'react';
+import {Card, Form, Input, Button, message, Icon, Checkbox} from 'antd';
+import {Link} from 'react-router-dom';
+import {withRouter} from 'react-router';
 import './index.less';
 
 const FormItem = Form.Item;
-const RadioGroup = Radio.Group;
 
 class Login extends Component {
-    state = {
-        value: 0,
+  state = {
+    value: 0,
+    remember: false,
+  };
+  componentDidMount () {
+    let userName = localStorage.getItem ('userName');
+    let value = {
+      userName,
     };
-
-    onChange = (e) => {
-        this.setState({
-            value: e.target.value,
-        });
-    };
-    handleSubmit = () => {
-        let userInfo = this.props.form.getFieldsValue();
-        this.props.form.validateFields((err, values) => {
-            if (!err) {
-                message.success(
-                    `亲，${userInfo.userName}成功登录了,密码是${userInfo.passWord}`
-                );
-            }
-        });
-    };
-    render() {
-        const { getFieldDecorator } = this.props.form;
-        return (
-            <div className="login-container">
-                <Card title="成果管理系统登录" className="login-card">
-                    <Form className="login-form">
-                        <FormItem>
-                            {getFieldDecorator('userName', {
-                                // initialValue:'jack',
-                                // 规则写在这里面
-                                rules: [
-                                    {
-                                        required: true,
-                                        message: '用户名不能为空',
-                                    },
-                                    {
-                                        min: 3,
-                                        max: 10,
-                                        message: '用户名长度为3~10位',
-                                    },
-                                    {
-                                        //   pattern:/^\w+$/g,
-                                        pattern: new RegExp('^\\w+$', 'g'),
-                                        message: '正则不匹配',
-                                    },
-                                ],
-                            })(
-                                <Input
-                                    prefix={<Icon type="user" />}
-                                    type="text"
-                                    placeholder="请输入用户名"
-                                />
-                            )}
-                        </FormItem>
-                        <FormItem>
-                            {getFieldDecorator('passWord', {
-                                rules: [],
-                            })(
-                                <Input
-                                    prefix={<Icon type="lock" />}
-                                    type="password"
-                                    placeholder="请输入密码"
-                                />
-                            )}
-                        </FormItem>
-                        <FormItem>
-                            <RadioGroup
-                                onChange={this.onChange}
-                                value={this.state.value}
-                            >
-                                <Radio value={0}>学生</Radio>
-                                <Radio value={1}>教师</Radio>
-                            </RadioGroup>
-                            <a href='/home' style={{float:'right'}} className="visit">游客登录</a>
-                        </FormItem>
-                        <FormItem>
-                            <Button
-                                block
-                                size="large"
-                                type="primary"
-                                onClick={() => {
-                                    this.handleSubmit();
-                                }}
-                            >
-                                登录
-                            </Button>
-                        </FormItem>
-                    </Form>
-                </Card>
-            </div>
-        );
-    }
+    this.props.form.setFieldsValue (value);
+  }
+  handleSubmit = () => {
+    this.props.form.validateFields ((err, values) => {
+      if (!err) {
+        if (this.state.remember) {
+          localStorage.setItem ('userName', values.userName);
+        } else {
+          localStorage.removeItem ('userName');
+        }
+        
+        message.success (`登录成功`);
+        this.props.history.push ('/');
+      } else {
+        message.error (`尴尬，登录失败`);
+      }
+    });
+  };
+  rememberMe = e => {
+    this.setState ({
+      remember: e.target.checked,
+    });
+  };
+  render () {
+    const {getFieldDecorator} = this.props.form;
+    return (
+      <div className="login-container">
+        <Card title="React后台管理系统" className="login-card">
+          <Form className="login-form">
+            <FormItem>
+              {getFieldDecorator ('userName', {
+                rules: [
+                  {
+                    required: true,
+                    message: '用户名不能为空！',
+                  },
+                  {
+                    min: 3,
+                    max: 10,
+                    message: '用户名长度为3~10位',
+                  },
+                  {
+                    //   pattern:/^\w+$/g,
+                    pattern: new RegExp ('^\\w+$', 'g'),
+                    message: '正则不匹配',
+                  },
+                ],
+              }) (
+                <Input
+                  prefix={<Icon type="user" />}
+                  type="text"
+                  placeholder="请输入用户名"
+                />
+              )}
+            </FormItem>
+            <FormItem>
+              {getFieldDecorator ('passWord', {
+                rules: [
+                  {
+                    required: true,
+                    message: '密码不能为空！',
+                  },
+                ],
+              }) (
+                <Input
+                  prefix={<Icon type="lock" />}
+                  type="password"
+                  placeholder="请输入密码"
+                />
+              )}
+            </FormItem>
+            <FormItem>
+              <Checkbox onChange={this.rememberMe}>记住我</Checkbox>
+              <Link to="/" className="visit">游客登录</Link>
+            </FormItem>
+            <FormItem>
+              <Button
+                block
+                size="large"
+                type="primary"
+                onClick={() => {
+                  this.handleSubmit ();
+                }}
+              >
+                登录
+              </Button>
+            </FormItem>
+          </Form>
+        </Card>
+      </div>
+    );
+  }
 }
-
-export default Form.create()(Login);
+export default withRouter (Form.create () (Login));

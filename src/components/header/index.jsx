@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 import { Menu, Icon, Layout, Popover } from 'antd';
 import SiderCustom from '_c/sider-custom';
 import screenfull from 'screenfull';
@@ -27,9 +27,6 @@ class MyHeader extends Component {
         if (screenfull.enabled) {
             screenfull.toggle();
         }
-    };
-    logOut = () => {
-        return <Redirect to="/login" />;
     };
     render() {
         const {
@@ -81,7 +78,7 @@ class MyHeader extends Component {
                     >
                         <Menu.Item key="setting">个人信息</Menu.Item>
                         <Menu.Item key="logout">
-                            <span onClick={this.logOut}>退出登录</span>
+                           <Link to="/login">退出登录</Link>
                         </Menu.Item>
                     </SubMenu>
                 </Menu>
