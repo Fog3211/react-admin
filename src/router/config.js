@@ -86,14 +86,14 @@ const menus = [{
         title: '表格',
         icon: 'copy',
         subs: [{
-                key: '/app/table/basicTable',
+                key: '/app/table/basic-table',
                 title: '基础表格',
                 component: 'BasicTable'
             },
             {
-                key: '/app/table/advancedTable',
+                key: '/app/table/senior-table',
                 title: '高级表格',
-                component: 'AdvancedTable'
+                component: 'SeniorTable'
             }
         ],
     },

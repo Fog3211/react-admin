@@ -7,6 +7,8 @@ import { createStore } from 'redux'
 
 import * as serviceWorker from './serviceWorker';
 
+// 引入mock接口
+import mock from "./mock";
 //引入路由文件
 import IRouter from './router/router';
 //创建store

@@ -12,7 +12,7 @@ const responsiveReducer = (state = responsive, action) => {
         case 'responsive':
             {
                 const cW = action.width;
-                newState.data.isMobile = (cW <= 992);
+                newState.data.isMobile = (cW <= 768);
                 return newState;
             }
         default:

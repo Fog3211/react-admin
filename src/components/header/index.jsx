@@ -28,6 +28,9 @@ class MyHeader extends Component {
             screenfull.toggle();
         }
     };
+    logOut=()=>{
+        sessionStorage.removeItem('userName');
+    }
     render() {
         const {
             responsive = { data: {} },
@@ -78,7 +81,7 @@ class MyHeader extends Component {
                     >
                         <Menu.Item key="setting">个人信息</Menu.Item>
                         <Menu.Item key="logout">
-                           <Link to="/login">退出登录</Link>
+                           <Link to="/login" onClick={this.logOut}>退出登录</Link>
                         </Menu.Item>
                     </SubMenu>
                 </Menu>
