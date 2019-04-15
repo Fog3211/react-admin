@@ -70,14 +70,14 @@ const menus = [{
         title: '动画',
         icon: 'rocket',
         subs: [{
-                key: '/app/animation/basicAnimations',
+                key: '/app/animation/basic-animation',
                 title: '基础动画',
-                component: 'BasicAnimations'
+                component: 'BasicAnimation'
             },
             {
-                key: '/app/animation/exampleAnimations',
-                title: '动画案例',
-                component: 'ExampleAnimations'
+                key: '/app/animation/transition-animation',
+                title: '过渡动画',
+                component: 'TransitionAnimation'
             },
         ],
     },

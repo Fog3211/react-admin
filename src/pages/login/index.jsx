@@ -51,12 +51,17 @@ class Login extends Component {
             remember: e.target.checked,
         });
     };
+    handleEnter=(e)=>{
+      if(e.keyCode===13){
+        this.handleSubmit();
+      }
+    }
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
             <div className="login-container">
                 <Card title="React后台管理系统" className="login-card">
-                    <Form className="login-form">
+                    <Form className="login-form" onKeyDown={this.handleEnter}>
                         <FormItem>
                             {getFieldDecorator('userName', {
                                 rules: [
