@@ -75,9 +75,9 @@ const menus = [{
                 component: 'BasicAnimation'
             },
             {
-                key: '/app/animation/transition-animation',
-                title: '过渡动画',
-                component: 'TransitionAnimation'
+                key: '/app/animation/complex-animation',
+                title: '复杂动画',
+                component: 'ComplexAnimation'
             },
         ],
     },

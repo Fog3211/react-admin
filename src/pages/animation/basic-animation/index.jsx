@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Switch } from 'antd';
-import list from './list.js';
 import './index.less';
+import list from './data.js';
 
 class BasicAnimation extends Component {
     state = {
