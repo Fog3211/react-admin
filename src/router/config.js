@@ -91,9 +91,19 @@ const menus = [{
                 component: 'BasicTable'
             },
             {
-                key: '/app/table/senior-table',
-                title: '高级表格',
-                component: 'SeniorTable'
+                key: '/app/table/screening-table',
+                title: '可筛选表格',
+                component: 'ScreeningTable'
+            },
+            {
+                key: '/app/table/editable-table',
+                title: '可编辑表格',
+                component: 'EditableTable'
+            },
+            {
+                key: '/app/table/dynamic-table',
+                title: '动态控制表格',
+                component: 'DynamicTable'
             }
         ],
     },
@@ -116,20 +126,6 @@ const menus = [{
                 key: '/app/chart/recharts',
                 title: 'recharts',
                 component: 'Recharts'
-            },
-        ],
-    },
-    {
-        key: '/subs4',
-        title: '页面',
-        icon: 'switcher',
-        subs: [{
-                key: '/login',
-                title: '登录'
-            },
-            {
-                key: '/404',
-                title: '404'
             },
         ],
     },
