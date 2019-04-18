@@ -6,6 +6,7 @@ import ScreeningTable from '_p/table/screening-table';
 import EditableTable from '_p/table/editable-table';
 import BasicAnimation from '_p/animation/basic-animation';
 import ComplexAnimation from '_p/animation/complex-animation';
+import Map from '_p/ui/map';
 
 export default {
     Home,
@@ -15,5 +16,6 @@ export default {
     ScreeningTable,
     DynamicTable,
     EditableTable,
-    ComplexAnimation
+    ComplexAnimation,
+    Map
 }

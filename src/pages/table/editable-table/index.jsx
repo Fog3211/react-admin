@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Table, Input, Popconfirm, Form, Button } from 'antd';
+import { Table, Input, InputNumber, Popconfirm, Form, Button } from 'antd';
 import { editable_table } from '@/mock/data/table';
+import "./index.less";
 
 const FormItem = Form.Item;
 const EditableContext = React.createContext();
@@ -15,6 +16,9 @@ const EditableFormRow = Form.create()(EditableRow);
 
 class EditableCell extends Component {
     getInput = () => {
+        if (this.props.inputType === 'number') {
+            return <InputNumber />;
+        }
         return <Input />;
     };
     render() {
@@ -64,13 +68,13 @@ export default class EditableTable extends Component {
             {
                 title: '姓名',
                 dataIndex: 'name',
-                width: '20%',
+                width: '25%',
                 editable: true,
             },
             {
                 title: '年龄',
                 dataIndex: 'age',
-                width: '20%',
+                width: '15%',
                 editable: true,
             },
             {
@@ -197,7 +201,7 @@ export default class EditableTable extends Component {
                 ...col,
                 onCell: (record) => ({
                     record,
-                    inputType:'text',
+                    inputType: col.dataIndex === 'age' ? 'number' : 'text',
                     dataIndex: col.dataIndex,
                     title: col.title,
                     editing: this.isEditing(record),

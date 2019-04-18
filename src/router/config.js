@@ -61,7 +61,7 @@ const menus = [{
             {
                 key: '/app/ui/map',
                 title: '地图',
-                component: 'MapUi'
+                component: 'Map'
             },
         ],
     },
