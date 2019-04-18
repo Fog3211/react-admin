@@ -13,9 +13,10 @@ for (let i = 0; i < 99; i++) {
         telphone: Mock.mock(/^1[34578]\d{1}-\d{4}-\d{4}$/),
         birthday: Mock.mock('@date'),
         sex: Mock.mock('@integer(0,1)') === 1 ? '男' : '女',
+        introduction:Mock.mock('@cparagraph(2, 4)')
     })
 }
-for (let i = 0; i < 99; i++) {
+for (let i = 0; i < 49; i++) {
     screening_table.push({
         key: i,
         name: Mock.mock('@cname'),

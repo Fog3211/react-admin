@@ -44,6 +44,11 @@ export default class BasicTable extends Component {
                 dataIndex: 'address',
                 key: 'address',
             },
+            {
+                title: '个人简介',
+                dataIndex: 'introduction',
+                key: 'introduction',
+            },
         ];
 
         return <Table columns={columns} dataSource={data} />;
