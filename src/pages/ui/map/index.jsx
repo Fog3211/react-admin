@@ -23,7 +23,7 @@ export default class Map extends Component {
             <Row gutter={16}>
                 <Col md={24}>
                     <Card bordered={false} title="腾讯地图">
-                        <ReactQMap {...this.state} style={{height: 700,position: 'relative'}}/>
+                        <ReactQMap {...this.state} style={{height: 700}}/>
                     </Card>
                 </Col>
             </Row>
