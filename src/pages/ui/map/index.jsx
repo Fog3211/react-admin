@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Row, Col, Card } from 'antd';
+import { Row, Col } from 'antd';
 import ReactQMap from 'react-qmap';
 
+let classMap, windowMap;
 export default class Map extends Component {
     state={
         apiKey:"UN6BZ-MP2W6-XWCSX-M2ATU-QORGZ-OWFOE",
@@ -18,13 +19,23 @@ export default class Map extends Component {
             mapTypeControl: true
         },
     }
+    setMarker = () => {
+        new windowMap.Marker({
+             map: classMap,
+             position: new windowMap.LatLng(30.53786, 104.07265),
+             animation: windowMap.MarkerAnimation.DROP,
+           });
+         }
+    getMap = (map, wMap) => {
+        classMap = map;
+        windowMap = wMap;
+        this.setMarker();
+    }
     render() {
         return (
             <Row gutter={16}>
                 <Col md={24}>
-                    <Card bordered={false} title="腾讯地图">
-                        <ReactQMap {...this.state} style={{height: 700}}/>
-                    </Card>
+                     <ReactQMap {...this.state} style={{height: 700}} getMap={(map, wMap) => this.getMap(map, wMap)} />
                 </Col>
             </Row>
         );
