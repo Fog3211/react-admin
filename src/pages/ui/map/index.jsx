@@ -10,19 +10,12 @@ export default class Map extends Component {
             latitude:36.003147,
             longitude: 120.12221
         },
-        mySpot:{
-            latitude: 36.003147,
-            longitude: 120.12221
-        },
-        initialOptions:{
-            zoomControl: true, 
-            mapTypeControl: true
-        },
     }
     setMarker = () => {
+        const {latitude,longitude}=this.state.center;
         new windowMap.Marker({
              map: classMap,
-             position: new windowMap.LatLng(30.53786, 104.07265),
+             position: new windowMap.LatLng(latitude, longitude),
              animation: windowMap.MarkerAnimation.DROP,
            });
          }

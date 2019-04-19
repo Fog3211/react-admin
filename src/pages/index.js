@@ -7,6 +7,7 @@ import EditableTable from '_p/table/editable-table';
 import BasicAnimation from '_p/animation/basic-animation';
 import ComplexAnimation from '_p/animation/complex-animation';
 import Map from '_p/ui/map';
+import Icons from '_p/ui/icons';
 
 export default {
     Home,
@@ -17,5 +18,6 @@ export default {
     DynamicTable,
     EditableTable,
     ComplexAnimation,
-    Map
+    Map,
+    Icons
 }
