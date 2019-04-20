@@ -8,11 +8,7 @@ const menus = [{
         key: '/app/ui',
         title: 'UI',
         icon: 'scan',
-        subs: [{
-                key: '/app/ui/buttons',
-                title: '按钮',
-                component: 'Buttons'
-            },
+        subs: [
             {
                 key: '/app/ui/icons',
                 title: '图标',

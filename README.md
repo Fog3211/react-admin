@@ -23,3 +23,4 @@ react后台管理系统，开发中ing
 ## 技术障碍
 
 ## 鸣谢
+Ciwing·Jon提供的[漫威头像图标](https://www.iconfont.cn/collections/detail?cid=15515)

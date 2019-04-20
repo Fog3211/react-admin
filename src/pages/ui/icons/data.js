@@ -1,4 +1,145 @@
-const icon_avatar_list = [];
+const icon_avatar_list = [{
+    name: "复仇者联盟-黑寡妇",
+    code: "#icon-fuchouzhelianmeng-heiguafu"
+},
+{
+    name: "罗南",
+    code: "#icon-luonan"
+},
+{
+    name: "神奇四侠-隐形女侠",
+    code: "#icon-shenqisixia-yinxingnvxia"
+},
+{
+    name: "银河护卫队-毁灭者德拉克斯",
+    code: "#icon-yinhehuweidui-huimiezhedelakesi"
+},
+{
+    name: "银河护卫队-卡魔拉",
+    code: "#icon-yinhehuweidui-qiamola"
+},
+{
+    name: "绯红女巫",
+    code: "#icon-feihongnvwu"
+},
+{
+    name: "复仇者联盟-浩克",
+    code: "#icon-fuchouzhelianmeng-haoke"
+},
+{
+    name: "红骷髅",
+    code: "#icon-hongkulou"
+},
+{
+    name: "复仇者联盟-钢铁侠",
+    code: "#icon-fuchouzhelianmeng-gangtiexia"
+},
+{
+    name: "复仇者联盟-幻视",
+    code: "#icon-fuchouzhelianmeng-huanshi"
+},
+{
+    name: "交叉骨",
+    code: "#icon-jiaochagu"
+},
+{
+    name: "复仇者联盟-雷神",
+    code: "#icon-fuchouzhelianmeng-leishen"
+},
+{
+    name: "奇异博士",
+    code: "#icon-qiyiboshi"
+},
+{
+    name: "复仇者联盟-猎鹰",
+    code: "#icon-fuchouzhelianmeng-lieying"
+},
+{
+    name: "异人族-黑蝠王",
+    code: "#icon-yirenzu-heifuwang"
+},
+{
+    name: "神奇四侠-神奇先生",
+    code: "#icon-shenqisixia-shenqixiansheng"
+},
+{
+    name: "洛基",
+    code: "#icon-luoji"
+},
+{
+    name: "捍卫者联盟-夜魔侠",
+    code: "#icon-hanweizhelianmeng-yemoxia"
+},
+{
+    name: "神奇四侠-霹雳火",
+    code: "#icon-shenqisixia-pilihuo"
+},
+{
+    name: "复仇者联盟-黑豹",
+    code: "#icon-fuchouzhelianmeng-heibao"
+},
+{
+    name: "银河护卫队-浣熊火箭",
+    code: "#icon-yinhehuweidui-huanxionghuojian"
+},
+{
+    name: "冬日战士",
+    code: "#icon-dongrizhanshi"
+},
+{
+    name: "复仇者联盟-鹰眼",
+    code: "#icon-fuchouzhelianmeng-yingyan"
+},
+{
+    name: "复仇者联盟-美国队长",
+    code: "#icon-fuchouzhelianmeng-meiguoduichang"
+},
+{
+    name: "征服者康",
+    code: "#icon-zhengfuzhekang"
+},
+{
+    name: "复仇者联盟-蚁人",
+    code: "#icon-fuchouzhelianmeng-yiren"
+},
+{
+    name: "银河护卫队-星爵",
+    code: "#icon-yinhehuweidui-xingjue"
+},
+{
+    name: "泽莫男爵",
+    code: "#icon-zemonanjue"
+},
+{
+    name: "红浩克",
+    code: "#icon-honghaoke"
+},
+{
+    name: "末日博士",
+    code: "#icon-moriboshi"
+},
+{
+    name: "奥创",
+    code: "#icon-aochuang"
+},
+{
+    name: "银河护卫队-格鲁特",
+    code: "#icon-yinhehuweidui-gelute"
+},
+{
+    name: "灭霸",
+    code: "#icon-mieba"
+},
+{
+    name: "恶灵骑士",
+    code: "#icon-elingqishi"
+},
+{
+    name: "神奇四侠-石头人",
+    code: "#icon-shenqisixia-shitouren"
+}];
+
+
 const icon_font_list = [
     'step-backward',
     'step-forward',
@@ -338,10 +479,11 @@ const icon_font_list = [
     'yahoo',
 ];
 
-
-
-
 export {
     icon_avatar_list,
     icon_font_list,
 }
+
+
+
+

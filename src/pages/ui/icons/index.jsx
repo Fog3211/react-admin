@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, Card, Icon } from 'antd';
 import { icon_avatar_list, icon_font_list } from './data';
 import "./index.less";
-import "@/assets/iconfont/iconfont";
+import "@/assets/iconfont/iconfont.js";
 
 export default class Icons extends Component {
     state = {
@@ -37,19 +37,19 @@ export default class Icons extends Component {
                     </Card>
                 </Col>
                 <Col>
-                    <Card bordered={false} title="iconfont图标库">
+                    <Card bordered={false} title="iconfont图标库（Symbol格式）">
                         <Row className="icons-list">
-                            {icon_avatar_list.map((item, index) => {
+                        {
+                            icon_avatar_list.map((item,index)=>{
                                 return (
-                                    <Col key={index} className="icon-box" md={4} xs={8}>
-                                        <Icon
-                                            type={item}
-                                            className="icon"
-                                        />
-                                        <p>{item}</p>
-                                    </Col>
-                                );
-                            })}
+                                <Col key={index} className="icon-box" md={4} xs={8}>
+                                    <svg className="icon" aria-hidden="true">
+                                        <use xlinkHref={item.code}></use>   
+                                    </svg>
+                                    <p>{item.name}</p>
+                                </Col>)
+                            })
+                        }
                         </Row>
                     </Card>
                 </Col>
