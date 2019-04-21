@@ -25,9 +25,9 @@ const menus = [{
                 component: 'TabNav'
             },
             {
-                key: '/app/ui/banners',
-                title: '轮播图',
-                component: 'Banners'
+                key: '/app/ui/drawer',
+                title: '抽屉',
+                component: 'DrawerUI'
             },
             {
                 key: '/app/ui/rich-text',
@@ -35,9 +35,9 @@ const menus = [{
                 component: 'RichText'
             },
             {
-                key: '/app/ui/drags',
+                key: '/app/ui/drag',
                 title: '拖拽',
-                component: 'Drags'
+                component: 'Drag'
             },
             {
                 key: '/app/ui/gallery',

@@ -11,6 +11,8 @@ import Icons from '_p/ui/icons';
 import StepBar from '_p/ui/step-bar';
 import RichText from '_p/ui/rich-text';
 import TabNav from '_p/ui/tab-nav';
+import Drag from '_p/ui/drag';
+import DrawerUI from '_p/ui/drawer';
 
 export default {
     Home,
@@ -25,5 +27,7 @@ export default {
     Icons,
     StepBar,
     RichText,
-    TabNav
+    TabNav,
+    Drag,
+    DrawerUI
 }

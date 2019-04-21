@@ -12,6 +12,7 @@ react后台管理系统，开发中ing
 [photoswipe](https://github.com/dimsemenov/photoswipe):图片弹层查看插件  
 [react-color](https://github.com/casesandberg/react-color):调色板组件   
 [react-draft-wysiwyg](https://github.com/jpuri/react-draft-wysiwyg):富文本组件   
+[react-draggable](https://github.com/mzabriskie/react-draggable):React拖拽插件     
 [react-highlight-words](https://github.com/bvaughn/react-highlight-words):table表格字体高亮    
 [react-lottie](https://github.com/chenqingspring/react-lottie):React版Lottie动画  
 [react-qmap](https://github.com/yezihaohao/react-qmap):React版地图组件  

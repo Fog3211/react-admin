@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Row, Col, Card } from 'antd';
+// import { Row, Col, Card } from 'antd';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { EditorState, convertToRaw } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
-import draftToMarkdown from 'draftjs-to-markdown';
+// import draftToMarkdown from 'draftjs-to-markdown';
 
 export default class RichText extends Component {
     state = {
