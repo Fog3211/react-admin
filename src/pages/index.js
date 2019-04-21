@@ -8,6 +8,7 @@ import BasicAnimation from '_p/animation/basic-animation';
 import ComplexAnimation from '_p/animation/complex-animation';
 import Map from '_p/ui/map';
 import Icons from '_p/ui/icons';
+import StepBar from '_p/ui/step-bar';
 
 export default {
     Home,
@@ -19,5 +20,6 @@ export default {
     EditableTable,
     ComplexAnimation,
     Map,
-    Icons
+    Icons,
+    StepBar
 }

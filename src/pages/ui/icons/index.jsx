@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, Card, Icon } from 'antd';
 import { icon_avatar_list, icon_font_list } from './data';
 import "./index.less";
-import "@/assets/iconfont/iconfont.js";
+import "@/assets/iconfont/iconfont";
 
 export default class Icons extends Component {
     state = {
@@ -34,7 +34,7 @@ export default class Icons extends Component {
                                 );
                             })}
                         </Row>
-                    </Card>
+                    </Card> 
                 </Col>
                 <Col>
                     <Card bordered={false} title="iconfont图标库（Symbol格式）">

@@ -15,19 +15,9 @@ const menus = [{
                 component: 'Icons'
             },
             {
-                key: '/app/ui/spins',
-                title: '加载中',
-                component: 'Spins'
-            },
-            {
-                key: '/app/ui/modals',
-                title: '对话框',
-                component: 'Modals'
-            },
-            {
-                key: '/app/ui/notifications',
-                title: '通知提醒框',
-                component: 'Notifications'
+                key: '/app/ui/step-bar',
+                title: '步骤条',
+                component: 'StepBar'
             },
             {
                 key: '/app/ui/tabs',
