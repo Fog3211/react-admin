@@ -22,6 +22,9 @@
     "css-loader": "1.0.0",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
+    "draft-js": "^0.10.5",
+    "draftjs-to-html": "^0.8.4",
+    "draftjs-to-markdown": "^0.5.1",
     "eslint": "5.12.0",
     "eslint-config-react-app": "^3.0.8",
     "eslint-loader": "2.1.1",
@@ -55,6 +58,7 @@
     "react-color": "^2.17.0",
     "react-dev-utils": "^8.0.0",
     "react-dom": "^16.8.4",
+    "react-draft-wysiwyg": "^1.13.2",
     "react-highlight-words": "^0.16.0",
     "react-lottie": "^1.2.3",
     "react-qmap": "^0.1.5",
@@ -80,7 +84,7 @@
   "eslintConfig": {
     "extends": "react-app",
     "rules": {
-      "no-unused-expressions":"off"
+      "no-unused-expressions": "off"
     }
   },
   "browserslist": [
@@ -143,5 +147,4 @@
     "@babel/preset-env": "^7.4.1",
     "redux-devtools": "^3.5.0"
   }
-  
 }

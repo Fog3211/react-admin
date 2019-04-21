@@ -11,6 +11,7 @@ react后台管理系统，开发中ing
 [nprogress](https://github.com/rstacruz/nprogress):加载进度条    
 [photoswipe](https://github.com/dimsemenov/photoswipe):图片弹层查看插件  
 [react-color](https://github.com/casesandberg/react-color):调色板组件   
+[react-draft-wysiwyg](https://github.com/jpuri/react-draft-wysiwyg):富文本组件   
 [react-highlight-words](https://github.com/bvaughn/react-highlight-words):table表格字体高亮    
 [react-lottie](https://github.com/chenqingspring/react-lottie):React版Lottie动画  
 [react-qmap](https://github.com/yezihaohao/react-qmap):React版地图组件  
@@ -22,5 +23,6 @@ react后台管理系统，开发中ing
 
 ## 技术障碍
 
-## 鸣谢
+## 感谢
+yezihaohao开源的[react-admin](https://github.com/yezihaohao/react-admin)项目  
 Ciwing·Jon提供的[漫威头像图标](https://www.iconfont.cn/collections/detail?cid=15515)

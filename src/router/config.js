@@ -20,9 +20,9 @@ const menus = [{
                 component: 'StepBar'
             },
             {
-                key: '/app/ui/tabs',
+                key: '/app/ui/tab-nav',
                 title: '标签页',
-                component: 'Tabs'
+                component: 'TabNav'
             },
             {
                 key: '/app/ui/banners',
@@ -30,9 +30,9 @@ const menus = [{
                 component: 'Banners'
             },
             {
-                key: '/app/ui/wysiwyg',
+                key: '/app/ui/rich-text',
                 title: '富文本',
-                component: 'WysiwygBundle'
+                component: 'RichText'
             },
             {
                 key: '/app/ui/drags',

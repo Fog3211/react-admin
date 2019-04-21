@@ -9,6 +9,8 @@ import ComplexAnimation from '_p/animation/complex-animation';
 import Map from '_p/ui/map';
 import Icons from '_p/ui/icons';
 import StepBar from '_p/ui/step-bar';
+import RichText from '_p/ui/rich-text';
+import TabNav from '_p/ui/tab-nav';
 
 export default {
     Home,
@@ -21,5 +23,7 @@ export default {
     ComplexAnimation,
     Map,
     Icons,
-    StepBar
+    StepBar,
+    RichText,
+    TabNav
 }
