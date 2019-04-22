@@ -13,6 +13,7 @@ import RichText from '_p/ui/rich-text';
 import TabNav from '_p/ui/tab-nav';
 import Drag from '_p/ui/drag';
 import DrawerUI from '_p/ui/drawer';
+import Gallery from '_p/ui/gallery';
 
 export default {
     Home,
@@ -30,4 +31,5 @@ export default {
     TabNav,
     Drag,
     DrawerUI,
+    Gallery
 }
