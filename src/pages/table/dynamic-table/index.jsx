@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Switch, Radio, Form } from 'antd';
-import { basic_table } from '@/mock/data/table';
+import Service from '@/service';
 
 const FormItem = Form.Item;
 
@@ -19,11 +19,15 @@ export default class DynamicTable extends Component {
         showHeader,
         scroll: undefined,
         hasData: true,
-        data: {},
+        data: [],
     };
     componentWillMount() {
-        this.setState({
-            data: basic_table,
+        Service.getTableData({
+            type: 'basic_table',
+        }).then((res) => {
+            this.setState({
+                data: res.data,
+            });
         });
     }
     handleToggle = (prop) => (enable) => {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Input, Button, Icon } from 'antd';
-import { screening_table } from '@/mock/data/table';
+import Service from '@/service';
 import Highlighter from 'react-highlight-words';
 
 export default class ScreeningTable extends Component {
@@ -11,8 +11,12 @@ export default class ScreeningTable extends Component {
         sortedInfo: null,
     };
     componentWillMount() {
-        this.setState({
-            data: screening_table,
+        Service.getTableData({
+            type: 'screening_table',
+        }).then((res) => {
+            this.setState({
+                data: res.data,
+            });
         });
     }
     onSelectChange = (selectedRowKeys) => {

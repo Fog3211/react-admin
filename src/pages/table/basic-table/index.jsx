@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import { Table } from 'antd';
-import { basic_table } from '@/mock/data/table';
+import Service from '@/service';
 
 export default class BasicTable extends Component {
     state = {
         data: [],
     };
     componentWillMount() {
-        this.setState({
-            data: basic_table,
+        Service.getTableData({
+            type: 'basic_table',
+        }).then((res) => {
+            this.setState({
+                data: res.data,
+            });
         });
     }
     render() {

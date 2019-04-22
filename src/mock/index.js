@@ -2,6 +2,18 @@ import Mock from "mockjs";
 import {
     user_list
 } from "./data/user";
+import {
+    basic_table,
+    screening_table,
+    editable_table,
+} from "./data/table";
+
+// 正则取get参数
+function getQueryByName(url, name) {
+    var reg = new RegExp('[?&]' + name + '=([^&#]+)');
+    var query = url.match(reg);
+    return query ? query[1] : null;
+}
 
 //登录
 Mock.mock('/login', 'post', (params) => {
@@ -31,6 +43,33 @@ Mock.mock('/login', 'post', (params) => {
         return {
             resCode: 0,
             msg: '密码错误'
+        }
+    }
+})
+
+// 获取table数据
+Mock.mock(/^\/get_table_data/, 'get', (params) => {
+    let data_type = getQueryByName(params.url, 'type');
+
+    if (data_type === 'basic_table') {
+        return {
+            code: 1,
+            data: basic_table
+        }
+    } else if (data_type === 'screening_table') {
+        return {
+            code: 1,
+            data: screening_table
+        }
+
+    } else if (data_type === 'editable_table') {
+        return {
+            code: 1,
+            data: editable_table
+        }
+    } else {
+        return {
+            code: 0
         }
     }
 })

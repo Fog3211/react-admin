@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Input, InputNumber, Popconfirm, Form, Button } from 'antd';
-import { editable_table } from '@/mock/data/table';
+import Service from '@/service';
 import "./index.less";
 
 const FormItem = Form.Item;
@@ -63,7 +63,7 @@ class EditableCell extends Component {
 export default class EditableTable extends Component {
     constructor(props) {
         super(props);
-        this.state = { data: editable_table, editingKey: '' };
+        this.state = { data: [], editingKey: '' };
         this.columns = [
             {
                 title: '姓名',
@@ -137,6 +137,15 @@ export default class EditableTable extends Component {
                 },
             },
         ];
+    }
+    componentWillMount() {
+        Service.getTableData({
+            type: 'editable_table',
+        }).then((res) => {
+            this.setState({
+                data: res.data,
+            });
+        });
     }
     isEditing = (record) => {
         return record.key === this.state.editingKey;
