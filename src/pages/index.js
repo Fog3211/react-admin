@@ -29,5 +29,5 @@ export default {
     RichText,
     TabNav,
     Drag,
-    DrawerUI
+    DrawerUI,
 }
