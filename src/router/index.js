@@ -20,6 +20,9 @@ export default class CRouter extends Component {
         return permission ? this.requireAuth(permission, component) : component;
     };
     render() {
+        const {
+            responsive = {data: {}},
+          } = this.props;
         return (
             <Switch>
                 {
@@ -36,7 +39,7 @@ export default class CRouter extends Component {
                                         return (<div>
                                             {/* 面包屑标题导航 */}
                                             <BreadcrumbCustom first={(first_title?first_title:r.title)==='首页'?'':(first_title?first_title:r.title)} second={first_title?r.title:''} />
-                                            <Page/>
+                                            <Page responsive={responsive}/>
                                         </div>);
                                     }}
                                 />

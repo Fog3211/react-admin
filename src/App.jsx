@@ -92,7 +92,7 @@ class App extends Component {
             </Sider>}
           <Layout style={{flexDirection: 'column'}}>
             <Content className="content">
-              <Routes auth={auth} />
+              <Routes auth={auth} responsive={responsive}/>
             </Content>
             <Footer className="footer">
               React-Admin © 2019 Created by Fog3211
