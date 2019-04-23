@@ -1,77 +1,92 @@
 const img_src = [{
-    title: "1",
+    title: "火影忍者",
     data: [{
-            info: "11",
-            url: 'http://img.hb.aicdn.com/ff97d00944edfc706c62dd5c0e955c4099a37b407534f-BcUqf0_fw'
+            info: "宇智波鼬",
+            url: require('@/assets/img/gallery/1.png')
         },
         {
-            info: "12",
-            url: 'http://img.hb.aicdn.com/ff97d00944edfc706c62dd5c0e955c4099a37b407534f-BcUqf0_fw'
+            info: "小南",
+            url: require('@/assets/img/gallery/2.png')
         },
         {
-            info: "13",
-            url: 'http://img.hb.aicdn.com/ff97d00944edfc706c62dd5c0e955c4099a37b407534f-BcUqf0_fw'
+            info: "弥彦",
+            url: require('@/assets/img/gallery/3.png')
         },
         {
-            info: "14",
-            url: 'http://img.hb.aicdn.com/ff97d00944edfc706c62dd5c0e955c4099a37b407534f-BcUqf0_fw'
+            info: "漩涡鸣人",
+            url: require('@/assets/img/gallery/4.png')
+        },
+        {
+            info: "旗木卡卡西",
+            url: require('@/assets/img/gallery/5.png')
         },
     ]
 }, {
-    title: "2",
+    title: "海贼王",
     data: [{
-            info: "21",
-            url: 'http://img.hb.aicdn.com/ff97d00944edfc706c62dd5c0e955c4099a37b407534f-BcUqf0_fw'
+            info: "萨博",
+            url: require('@/assets/img/gallery/6.png')
         },
         {
-            info: "22",
-            url: 'http://img.hb.aicdn.com/ff97d00944edfc706c62dd5c0e955c4099a37b407534f-BcUqf0_fw'
+            info: "布鲁克",
+            url: require('@/assets/img/gallery/7.png')
         },
         {
-            info: "23",
-            url: 'http://img.hb.aicdn.com/ff97d00944edfc706c62dd5c0e955c4099a37b407534f-BcUqf0_fw'
+            info: "托尼托尼乔巴",
+            url: require('@/assets/img/gallery/8.png')
         },
         {
-            info: "24",
-            url: 'http://img.hb.aicdn.com/ff97d00944edfc706c62dd5c0e955c4099a37b407534f-BcUqf0_fw'
+            info: "加洛特",
+            url: require('@/assets/img/gallery/9.png')
+        },
+        {
+            info: "克尔拉",
+            url: require('@/assets/img/gallery/10.png')
+        },
+        {
+            info: "佩罗娜",
+            url: require('@/assets/img/gallery/11.png')
         },
     ]
 }, {
-    title: "3",
+    title: "进击的巨人",
     data: [{
-            info: "31",
-            url: 'http://img.hb.aicdn.com/ff97d00944edfc706c62dd5c0e955c4099a37b407534f-BcUqf0_fw'
+            info: "三笠阿克曼",
+            url: require('@/assets/img/gallery/12.png')
         },
         {
-            info: "32",
-            url: 'http://img.hb.aicdn.com/ff97d00944edfc706c62dd5c0e955c4099a37b407534f-BcUqf0_fw'
+            info: "利威尔",
+            url: require('@/assets/img/gallery/13.png')
         },
         {
-            info: "33",
-            url: 'http://img.hb.aicdn.com/ff97d00944edfc706c62dd5c0e955c4099a37b407534f-BcUqf0_fw'
+            info: "希斯特利亚",
+            url: require('@/assets/img/gallery/14.png')
         },
         {
-            info: "34",
-            url: 'http://img.hb.aicdn.com/ff97d00944edfc706c62dd5c0e955c4099a37b407534f-BcUqf0_fw'
+            info: "阿尼",
+            url: require('@/assets/img/gallery/15.png')
         },
     ]
 }, {
-    title: "4",
+    title: "龙珠",
     data: [{
-            info: "41",
-            url: 'http://img.hb.aicdn.com/98c786f4314736f95a42bf927bf65a82d305a532c6258-njI6id_fw'
+            info: "孙悟空",
+            url: require('@/assets/img/gallery/16.png')
+        }, {
+            info: "弗利萨",
+            url: require('@/assets/img/gallery/17.png')
         },
         {
-            info: "42",
-            url: 'http://img.hb.aicdn.com/4ea229436fcf2077502953907a6afb16d3c5cd611b8e2-0dVIeH_fw'
+            info: "贝吉塔",
+            url: require('@/assets/img/gallery/18.png')
         },
         {
-            info: "43",
-            url: 'http://img.hb.aicdn.com/e3559b6e8d7237857382050e5659a64cc0b7d696a2869-stcRXA_fw'
+            info: "界王神",
+            url: require('@/assets/img/gallery/19.png')
         },
         {
-            info: "44",
-            url: 'http://img.hb.aicdn.com/71471aaac95eade66400a390863b37c76d9addcd14982-0H6sak_fw'
+            info: "人造人18号",
+            url: require('@/assets/img/gallery/20.png')
         },
     ]
 }];

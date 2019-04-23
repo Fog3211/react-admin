@@ -15,7 +15,7 @@ export default class Gallery extends Component {
     componentWillMount() {
         this.setState({ img_src });
     }
-    componentWillUnmount = () => {
+    componentWillUnmount() {
         this.closeGallery();
     };
     closeGallery = () => {
@@ -61,13 +61,14 @@ export default class Gallery extends Component {
                 <Card key={v2.info} title={v1.title} className="gallery-box">
                     <div>
                         <img
-                            onClick={() => this.openGallery(v2)} //不能直接调用
+                            onClick={() => this.openGallery(v2.url)} //不能直接调用
                             alt="img"
                             width="100%"
                             src={v2.url}
+                            className="img-show"
                         />
                     </div>
-                    <div className="pa-m">
+                    <div className="info">
                         <small>{v2.info}</small>
                     </div>
                 </Card>
