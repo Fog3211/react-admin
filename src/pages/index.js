@@ -14,6 +14,8 @@ import TabNav from '_p/ui/tab-nav';
 import Drag from '_p/ui/drag';
 import DrawerUI from '_p/ui/drawer';
 import Gallery from '_p/ui/gallery';
+import Echart from '_p/charts/echart';
+import Rechart from '_p/charts/rechart';
 
 export default {
     Home,
@@ -31,5 +33,7 @@ export default {
     TabNav,
     Drag,
     DrawerUI,
-    Gallery
+    Gallery,
+    Echart,
+    Rechart
 }

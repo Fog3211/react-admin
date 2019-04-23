@@ -104,14 +104,14 @@ const menus = [{
         title: '图表',
         icon: 'area-chart',
         subs: [{
-                key: '/app/chart/echarts',
+                key: '/app/charts/echart',
                 title: 'echarts',
-                component: 'Echarts'
+                component: 'Echart'
             },
             {
-                key: '/app/chart/recharts',
+                key: '/app/charts/rechart',
                 title: 'recharts',
-                component: 'Recharts'
+                component: 'Rechart'
             },
         ],
     },
