@@ -21,7 +21,7 @@ class BasicAnimation extends Component {
         const animation_list = list;
         const { animated, animated_index } = this.state;
         return (
-            <div>
+            <div className="animation-container">
                 <Row className="switch-box">
                     <span className="all-animation">全部动画</span>
                     <Switch onChange={this.animatedAll} />

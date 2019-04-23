@@ -23,12 +23,12 @@ export default class RichText extends Component {
         });
     };
     // 图片上传预览
-    imageUploadCallBack = file => new Promise(
-        (resolve, reject) => {
-            const xhr = new XMLHttpRequest(); // eslint-disable-line no-undef
+    imageUploadCallBack = (file) =>
+        new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
             xhr.open('POST', 'https://api.imgur.com/3/image');
-            xhr.setRequestHeader('Authorization', 'Client-ID 8d26ccd12712fca');
-            const data = new FormData(); // eslint-disable-line no-undef
+            xhr.setRequestHeader('Authorization', 'Client-ID '); //Client-ID
+            const data = new FormData();
             data.append('image', file);
             xhr.send(data);
             xhr.addEventListener('load', () => {
@@ -39,8 +39,7 @@ export default class RichText extends Component {
                 const error = JSON.parse(xhr.responseText);
                 reject(error);
             });
-        }
-    );
+        });
     render() {
         const { editorState, editorContent } = this.state;
         return (
@@ -58,7 +57,9 @@ export default class RichText extends Component {
                                 inline: { inDropdown: false },
                                 list: { inDropdown: true },
                                 textAlign: { inDropdown: true },
-                                image: { uploadCallback: this.imageUploadCallBack },
+                                image: {
+                                    uploadCallback: this.imageUploadCallBack,
+                                },
                             }}
                             spellCheck
                             localization={{ locale: 'zh' }}
@@ -66,15 +67,39 @@ export default class RichText extends Component {
                                 separator: ' ',
                                 trigger: '@',
                                 caseSensitive: true,
-                                // 键入@表示提示，键入＃标签
+                                // 键入@表示提示
                                 suggestions: [
                                     { text: 'A', value: 'AB', url: 'href-a' },
-                                    { text: 'AB', value: 'ABC', url: 'href-ab' },
-                                    { text: 'ABC', value: 'ABCD', url: 'href-abc' },
-                                    { text: 'ABCD', value: 'ABCDDDD', url: 'href-abcd' },
-                                    { text: 'ABCDE', value: 'ABCDE', url: 'href-abcde' },
-                                    { text: 'ABCDEF', value: 'ABCDEF', url: 'href-abcdef' },
-                                    { text: 'ABCDEFG', value: 'ABCDEFG', url: 'href-abcdefg' },
+                                    {
+                                        text: 'AB',
+                                        value: 'ABC',
+                                        url: 'href-ab',
+                                    },
+                                    {
+                                        text: 'ABC',
+                                        value: 'ABCD',
+                                        url: 'href-abc',
+                                    },
+                                    {
+                                        text: 'ABCD',
+                                        value: 'ABCDDDD',
+                                        url: 'href-abcd',
+                                    },
+                                    {
+                                        text: 'ABCDE',
+                                        value: 'ABCDE',
+                                        url: 'href-abcde',
+                                    },
+                                    {
+                                        text: 'ABCDEF',
+                                        value: 'ABCDEF',
+                                        url: 'href-abcdef',
+                                    },
+                                    {
+                                        text: 'ABCDEFG',
+                                        value: 'ABCDEFG',
+                                        url: 'href-abcdefg',
+                                    },
                                 ],
                             }}
                         />
