@@ -4,6 +4,14 @@ import './index.less';
 
 export default class Rechart extends Component {
     render() {
-        return (<div>rchart</div>);
+        return (
+            <div>
+                <Row>
+                    <Col>
+                        <Card>11</Card>
+                    </Col>
+                </Row>
+            </div>
+        );
     }
 }

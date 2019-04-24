@@ -1,88 +1,31 @@
 import React, { PureComponent } from 'react';
 import ReactEcharts from 'echarts-for-react';
+import { message } from 'antd';
+import Service from '@/service';
 
 export default class Funnel extends PureComponent {
-    getOption = () => ({
-        legend: {
-            data: ['展现', '点击', '访问', '咨询', '订单'],
-        },
-        series: [
-            {
-                name: '预期',
-                type: 'funnel',
-                left: '10%',
-                width: '80%',
-                label: {
-                    normal: {
-                        formatter: '{b}预期',
-                    },
-                    emphasis: {
-                        position: 'inside',
-                        formatter: '{b}预期: {c}%',
-                    },
-                },
-                labelLine: {
-                    normal: {
-                        show: false,
-                    },
-                },
-                itemStyle: {
-                    normal: {
-                        opacity: 0.7,
-                    },
-                },
-                data: [
-                    { value: 60, name: '访问' },
-                    { value: 40, name: '咨询' },
-                    { value: 20, name: '订单' },
-                    { value: 80, name: '点击' },
-                    { value: 100, name: '展现' },
-                ],
-            },
-            {
-                name: '实际',
-                type: 'funnel',
-                left: '10%',
-                width: '80%',
-                maxSize: '80%',
-                label: {
-                    normal: {
-                        position: 'inside',
-                        formatter: '{c}%',
-                        textStyle: {
-                            color: '#fff',
-                        },
-                    },
-                    emphasis: {
-                        position: 'inside',
-                        formatter: '{b}实际: {c}%',
-                    },
-                },
-                itemStyle: {
-                    normal: {
-                        opacity: 0.5,
-                        borderColor: '#fff',
-                        borderWidth: 2,
-                    },
-                },
-                data: [
-                    { value: 30, name: '访问' },
-                    { value: 10, name: '咨询' },
-                    { value: 5, name: '订单' },
-                    { value: 50, name: '点击' },
-                    { value: 80, name: '展现' },
-                ],
-            },
-        ],
-    });
-
+    state = {
+        option: {},
+    };
+    componentWillMount() {
+        Service.getFunnelData().then((res) => {
+            if (res.code === 1) {
+                this.setState({
+                    option: res.data,
+                });
+            } else {
+                message.error('漏斗图数据获取失败，请重试');
+            }
+        });
+    }
     render() {
+        const { option } = this.state;
         return (
             <ReactEcharts
                 ref={(e) => {
                     this.echarts_react = e;
                 }}
-                option={this.getOption()}
+                option={option}
             />
         );
     }

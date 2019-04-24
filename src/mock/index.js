@@ -8,7 +8,8 @@ import {
     editable_table,
 } from "./data/table";
 import {
-    graph_option
+    graph_option,
+    funnel_option
 } from "./data/echart";
 
 // 正则取get参数
@@ -84,5 +85,14 @@ Mock.mock(/^\/get_graph_data/, 'get', () => {
     return {
         code: 1,
         data: graph_option
+    }
+})
+
+// 获取funnel数据
+Mock.mock(/^\/get_funnel_data/, 'get', () => {
+
+    return {
+        code: 1,
+        data: funnel_option
     }
 })
