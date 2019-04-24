@@ -10,7 +10,9 @@ import {
 import {
     graph_option,
     funnel_option,
-    map_option
+    map_option,
+    gcalendar_option,
+    sunburst_option
 } from "./data/echart";
 
 // 正则取get参数
@@ -97,11 +99,30 @@ Mock.mock(/^\/get_funnel_data/, 'get', () => {
         data: funnel_option
     }
 })
+
 // 获取map数据
 Mock.mock(/^\/get_map_data/, 'get', () => {
 
     return {
         code: 1,
         data: map_option
+    }
+})
+
+// 获取gcalendar数据
+Mock.mock(/^\/get_gcalendar_data/, 'get', () => {
+
+    return {
+        code: 1,
+        data: gcalendar_option
+    }
+})
+
+// 获取sunburst数据
+Mock.mock(/^\/get_sunburst_data/, 'get', () => {
+
+    return {
+        code: 1,
+        data: sunburst_option
     }
 })

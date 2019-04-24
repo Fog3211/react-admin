@@ -17,6 +17,12 @@ const Service = {
     },
     getMapData() {
         return axios.get('/get_map_data',).then(res => res.data);
+    },
+    getGcalendarData() {
+        return axios.get('/get_gcalendar_data',).then(res => res.data);
+    },
+    getSunburstData() {
+        return axios.get('/get_sunburst_data',).then(res => res.data);
     }
 }
 export default Service;

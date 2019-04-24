@@ -37,6 +37,12 @@ const map_option = {
     tooltip: {
         trigger: 'item',
     },
+    toolbox: {
+        feature: {
+            dataView: {readOnly: true},
+            saveAsImage: {}
+        }
+    },
     legend: {
         orient: 'vertical',
         left: 'left',

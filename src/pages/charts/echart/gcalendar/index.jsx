@@ -1,68 +1,28 @@
 import React, { Component } from 'react';
 import ReactEcharts from 'echarts-for-react';
-import echarts from 'echarts';
+import { message } from 'antd';
+import Service from '@/service';
 
 export default class Gcalendar extends Component {
-    getVirtulData = (year) => {
-        year = year || '2019';
-        const date = +echarts.number.parseDate(year + '-01-01');
-        const end = +echarts.number.parseDate(+year + 1 + '-01-01');
-        const dayTime = 3600 * 24 * 1000;
-        const data = [];
-        for (let time = date; time < end; time += dayTime) {
-            data.push([
-                echarts.format.formatTime('yyyy-MM-dd', time),
-                Math.floor(Math.random() * 1000),
-            ]);
-        }
-        return data;
-    };
-    getOption = () => {
-        return {
-            tooltip: {
-                position: 'top',
-            },
-            visualMap: {
-                min: 0,
-                max: 1000,
-                calculable: true,
-                orient: 'horizontal',
-                left: 'center',
-                top: 'top',
-            },
-
-            calendar: [
-                {
-                    range: '2019',
-                    cellSize: ['auto', 20],
-                },
-                {
-                    top: 260,
-                    range: '2018',
-                    cellSize: ['auto', 20],
-                },
-            ],
-
-            series: [
-                {
-                    type: 'heatmap',
-                    coordinateSystem: 'calendar',
-                    calendarIndex: 0,
-                    data: this.getVirtulData(2019),
-                },
-                {
-                    type: 'heatmap',
-                    coordinateSystem: 'calendar',
-                    calendarIndex: 1,
-                    data: this.getVirtulData(2018),
-                },
-            ],
-        };
-    };
+    state={
+        option:{}
+    }
+    componentWillMount(){
+        Service.getGcalendarData().then((res) => {
+            if (res.code === 1) {
+                this.setState({
+                    option: res.data,
+                });
+            } else {
+                message.error('日历坐标系数据获取失败，请重试');
+            }
+        });
+    }   
     render() {
+        const { option } = this.state;
         return (
             <ReactEcharts
-                option={this.getOption()}
+                option={option}
                 style={{ height: '500px', width: '100%' }}
                 className="react_for_echarts"
             />

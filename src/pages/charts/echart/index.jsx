@@ -37,7 +37,7 @@ export default class Echart extends Component {
                 </Row>
                 <Row gutter={16}>
                     <Col>
-                        <Card title="类似Github的日历图" className="chart-box">
+                        <Card title="日历坐标系" className="chart-box">
                             <GCalendar />
                         </Card>
                     </Col>

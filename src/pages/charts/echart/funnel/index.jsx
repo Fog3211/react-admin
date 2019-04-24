@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import ReactEcharts from 'echarts-for-react';
 import { message } from 'antd';
 import Service from '@/service';
 
-export default class Funnel extends PureComponent {
+export default class Funnel extends Component {
     state = {
         option: {},
     };
