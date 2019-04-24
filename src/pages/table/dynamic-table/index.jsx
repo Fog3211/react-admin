@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Switch, Radio, Form } from 'antd';
+import { Table, Switch, Radio, Form, message } from 'antd';
 import Service from '@/service';
 
 const FormItem = Form.Item;
@@ -25,9 +25,13 @@ export default class DynamicTable extends Component {
         Service.getTableData({
             type: 'basic_table',
         }).then((res) => {
-            this.setState({
-                data: res.data,
-            });
+            if (res.code === 1) {
+                this.setState({
+                    data: res.data,
+                });
+            } else {
+                message.error('动态表格数据获取失败，请重试');
+            }
         });
     }
     handleToggle = (prop) => (enable) => {

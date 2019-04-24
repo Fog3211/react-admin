@@ -35,6 +35,12 @@ const graph_option = {
     title: {
         text: '人物关系图',
     },
+    toolbox: {
+        feature: {
+            dataView: {readOnly: true},
+            saveAsImage: {}
+        }
+    },
     animationDurationUpdate: 1500,
     animationEasingUpdate: 'quinticInOut',
     label: {

@@ -30,7 +30,8 @@ react后台管理系统，开发中ing
 ## 功能展示 
 
 ## 技术障碍
-富文本功能无法上传预览图片（[imgur](https://api.imgur.com/3/image)接口不可用）  
+富文本功能无法上传预览图片（[imgur](https://api.imgur.com/3/image)接口不可用）    
+图表功能中部分文字超出隐藏（echart本身生成canvas时的bug）    
 ## 感谢
 yezihaohao开源的[react-admin](https://github.com/yezihaohao/react-admin)项目  
 Ciwing·Jon提供的[漫威头像图标](https://www.iconfont.cn/collections/detail?cid=15515)

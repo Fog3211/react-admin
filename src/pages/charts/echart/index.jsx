@@ -12,32 +12,32 @@ export default class Echart extends Component {
         return (
             <div>
                 <Row gutter={16}>
-                    <Col md={12} className="chart-box">
-                        <Card title="关系图">
+                    <Col md={12}>
+                        <Card title="关系图" className="chart-box">
                             <Graph />
                         </Card>
                     </Col>
-                    <Col md={12} className="chart-box">
-                        <Card title="漏斗图">
+                    <Col md={12}>
+                        <Card title="漏斗图" className="chart-box">
                             <Funnel />
                         </Card>
                     </Col>
                 </Row>
                 <Row gutter={16}>
-                    <Col md={12} className="chart-box">
-                        <Card title="地图图表">
+                    <Col md={12}>
+                        <Card title="地图图表" className="chart-box">
                             <Map />
                         </Card>
                     </Col>
-                    <Col md={12} className="chart-box">
-                        <Card title="旭日图">
+                    <Col md={12}>
+                        <Card title="旭日图" className="chart-box">
                             <Sunburst />
                         </Card>
                     </Col>
                 </Row>
                 <Row gutter={16}>
-                    <Col className="chart-box">
-                        <Card title="类似Github的日历图">
+                    <Col>
+                        <Card title="类似Github的日历图" className="chart-box">
                             <GCalendar />
                         </Card>
                     </Col>

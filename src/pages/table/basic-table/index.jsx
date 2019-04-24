@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table } from 'antd';
+import { Table, message } from 'antd';
 import Service from '@/service';
 
 export default class BasicTable extends Component {
@@ -10,9 +10,13 @@ export default class BasicTable extends Component {
         Service.getTableData({
             type: 'basic_table',
         }).then((res) => {
-            this.setState({
-                data: res.data,
-            });
+            if (res.code === 1) {
+                this.setState({
+                    data: res.data,
+                });
+            } else {
+                message.error('基础表格数据获取失败，请重试');
+            }
         });
     }
     render() {

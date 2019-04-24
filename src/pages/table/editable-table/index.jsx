@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
-import { Table, Input, InputNumber, Popconfirm, Form, Button } from 'antd';
+import {
+    Table,
+    Input,
+    InputNumber,
+    Popconfirm,
+    Form,
+    Button,
+    message,
+} from 'antd';
 import Service from '@/service';
-import "./index.less";
+import './index.less';
 
 const FormItem = Form.Item;
 const EditableContext = React.createContext();
@@ -142,9 +150,13 @@ export default class EditableTable extends Component {
         Service.getTableData({
             type: 'editable_table',
         }).then((res) => {
-            this.setState({
-                data: res.data,
-            });
+            if (res.data === 1) {
+                this.setState({
+                    data: res.data,
+                });
+            } else {
+                message.error('可编辑表格数据获取失败，请重试');
+            }
         });
     }
     isEditing = (record) => {
@@ -223,7 +235,7 @@ export default class EditableTable extends Component {
                 <Button
                     onClick={this.handleAdd}
                     type="primary"
-                    style={{marginTop:10, marginBottom: 16 }}
+                    style={{ marginTop: 10, marginBottom: 16 }}
                 >
                     添加一行
                 </Button>

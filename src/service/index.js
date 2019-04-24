@@ -14,6 +14,9 @@ const Service = {
     },
     getFunnelData() {
         return axios.get('/get_funnel_data',).then(res => res.data);
+    },
+    getMapData() {
+        return axios.get('/get_map_data',).then(res => res.data);
     }
 }
 export default Service;

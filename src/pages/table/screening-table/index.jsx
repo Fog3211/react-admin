@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Input, Button, Icon } from 'antd';
+import { Table, Input, Button, Icon, message } from 'antd';
 import Service from '@/service';
 import Highlighter from 'react-highlight-words';
 
@@ -14,9 +14,13 @@ export default class ScreeningTable extends Component {
         Service.getTableData({
             type: 'screening_table',
         }).then((res) => {
-            this.setState({
-                data: res.data,
-            });
+            if (res.code === 1) {
+                this.setState({
+                    data: res.data,
+                });
+            } else {
+                message.error('可筛选表格数据获取失败，请重试');
+            }
         });
     }
     onSelectChange = (selectedRowKeys) => {

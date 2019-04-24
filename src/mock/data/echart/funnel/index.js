@@ -25,6 +25,12 @@ const funnel_option = {
     legend: {
         data: legend_data,
     },
+    toolbox: {
+        feature: {
+            dataView: {readOnly: true},
+            saveAsImage: {}
+        }
+    },
     series: [{
             name: '预期',
             type: 'funnel',
