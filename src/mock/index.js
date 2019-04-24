@@ -82,47 +82,27 @@ Mock.mock(/^\/get_table_data/, 'get', (params) => {
 })
 
 
-// 获取graph数据
-Mock.mock(/^\/get_graph_data/, 'get', () => {
-
-    return {
-        code: 1,
-        data: graph_option
-    }
-})
-
-// 获取funnel数据
-Mock.mock(/^\/get_funnel_data/, 'get', () => {
-
-    return {
-        code: 1,
-        data: funnel_option
-    }
-})
-
-// 获取map数据
-Mock.mock(/^\/get_map_data/, 'get', () => {
-
-    return {
-        code: 1,
-        data: map_option
-    }
-})
-
-// 获取gcalendar数据
-Mock.mock(/^\/get_gcalendar_data/, 'get', () => {
-
-    return {
-        code: 1,
-        data: gcalendar_option
-    }
-})
-
 // 获取sunburst数据
 Mock.mock(/^\/get_sunburst_data/, 'get', () => {
 
     return {
         code: 1,
         data: sunburst_option
+    }
+})
+
+// 获取echart_data数据
+Mock.mock(/^\/get_echart_data/, 'get', () => {
+
+    const echart_data = {
+        graph: graph_option,
+        funnel: funnel_option,
+        map: map_option,
+        gcalendar: gcalendar_option,
+        sunburst: sunburst_option
+    };
+    return {
+        code: 1,
+        data: echart_data
     }
 })

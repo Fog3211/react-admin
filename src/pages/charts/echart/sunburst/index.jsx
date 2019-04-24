@@ -1,31 +1,26 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { message } from 'antd';
-import Service from '@/service';
 import echarts from 'echarts';
 
 export default class Sunburst extends Component {
     state = {
         option: {},
+        dom: null,
     };
-    componentWillMount() {
-        Service.getSunburstData()
-            .then((res) => {
-                if (res.code === 1) {
-                    this.setState({
-                        option: res.data,
-                    });
-                } else {
-                    message.error('旭日图数据获取失败，请重试');
-                }
-            })
-            .then(() => {
-                let dom = ReactDOM.findDOMNode(this.refs.sunburst);
-                let myChart = echarts.init(dom);
-                myChart.setOption(this.state.option, true);
-            });
+    componentDidMount() {
+        let dom = ReactDOM.findDOMNode(this.refs.sunburst);
+        this.setState({
+            dom,
+        });
     }
     render() {
+        const { dom } = this.state;
+        const option = this.props.option || {};
+        if (dom) {
+            let myChart = echarts.init(dom);
+            myChart.setOption(option, true);
+        }
+
         return (
             <div
                 ref="sunburst"

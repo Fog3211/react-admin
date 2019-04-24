@@ -9,20 +9,11 @@ const Service = {
             params
         }).then(res => res.data);
     },
-    getGraphData() {
-        return axios.get('/get_graph_data',).then(res => res.data);
-    },
-    getFunnelData() {
-        return axios.get('/get_funnel_data',).then(res => res.data);
-    },
-    getMapData() {
-        return axios.get('/get_map_data',).then(res => res.data);
-    },
-    getGcalendarData() {
-        return axios.get('/get_gcalendar_data',).then(res => res.data);
-    },
     getSunburstData() {
         return axios.get('/get_sunburst_data',).then(res => res.data);
+    },
+    getEchartData(){
+        return axios.get('/get_echart_data',).then(res => res.data);
     }
 }
 export default Service;
