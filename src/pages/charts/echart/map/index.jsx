@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactEcharts from 'echarts-for-react';
-
-require('echarts/map/js/china.js');
+import "echarts/map/js/china.js";
 
 export default class Map extends Component {
     constructor(props) {
@@ -36,7 +35,6 @@ export default class Map extends Component {
         return {
             title: {
                 text: 'iphone销量',
-                subtext: '纯属虚构',
                 left: 'center',
             },
             tooltip: {
@@ -54,17 +52,6 @@ export default class Map extends Component {
                 top: 'bottom',
                 text: ['高', '低'], // 文本，默认为数值文本
                 calculable: true,
-            },
-            toolbox: {
-                show: true,
-                orient: 'vertical',
-                left: 'right',
-                top: 'center',
-                feature: {
-                    dataView: { readOnly: false },
-                    restore: {},
-                    saveAsImage: {},
-                },
             },
             series: [
                 {

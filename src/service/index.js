@@ -8,6 +8,9 @@ const Service = {
         return axios.get('/get_table_data', {
             params
         }).then(res => res.data);
+    },
+    getGraphData() {
+        return axios.get('/get_graph_data',).then(res => res.data);
     }
 }
 export default Service;

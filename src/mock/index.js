@@ -7,6 +7,9 @@ import {
     screening_table,
     editable_table,
 } from "./data/table";
+import {
+    graph_option
+} from "./data/echart";
 
 // 正则取get参数
 function getQueryByName(url, name) {
@@ -71,5 +74,15 @@ Mock.mock(/^\/get_table_data/, 'get', (params) => {
         return {
             code: 0
         }
+    }
+})
+
+
+// 获取graph数据
+Mock.mock(/^\/get_graph_data/, 'get', () => {
+
+    return {
+        code: 1,
+        data: graph_option
     }
 })

@@ -3,17 +3,6 @@ import ReactEcharts from 'echarts-for-react';
 
 export default class Funnel extends PureComponent {
     getOption = () => ({
-        tooltip: {
-            trigger: 'item',
-            formatter: '{a} <br/>{b} : {c}%',
-        },
-        toolbox: {
-            feature: {
-                dataView: { readOnly: false },
-                restore: {},
-                saveAsImage: {},
-            },
-        },
         legend: {
             data: ['展现', '点击', '访问', '咨询', '订单'],
         },
