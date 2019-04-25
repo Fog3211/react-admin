@@ -2461,6 +2461,10 @@ bail@^1.0.0:
   version "1.0.3"
   resolved "http://registry.npm.taobao.org/bail/download/bail-1.0.3.tgz#63cfb9ddbac829b02a3128cd53224be78e6c21a3"
 
+balanced-match@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.npm.taobao.org/balanced-match/download/balanced-match-0.4.2.tgz#cb3f3e3c732dc0f01ee70b403f302e61d7709838"
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
@@ -2914,7 +2918,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@2.x, classnames@^2.2.0, classnames@^2.2.1, classnames@^2.2.3, classnames@^2.2.5, classnames@^2.2.6, classnames@~2.2.6:
+classnames@2.x, classnames@^2.2.0, classnames@^2.2.1, classnames@^2.2.3, classnames@^2.2.5, classnames@^2.2.6, classnames@~2.2.5, classnames@~2.2.6:
   version "2.2.6"
   resolved "http://registry.npm.taobao.org/classnames/download/classnames-2.2.6.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fclassnames%2Fdownload%2Fclassnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
 
@@ -3185,6 +3189,10 @@ core-js@^1.0.0:
 core-js@^2.4.0, core-js@^2.5.0:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.1.tgz#87416ae817de957a3f249b3b5ca475d4aaed6042"
+
+core-js@~2.5.1:
+  version "2.5.7"
+  resolved "https://registry.npm.taobao.org/core-js/download/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -3510,6 +3518,80 @@ cyclist@~0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-0.2.2.tgz#1b33792e11e914a2fd6d6ed6447464444e5fa640"
 
+d3-array@^1.2.0:
+  version "1.2.4"
+  resolved "https://registry.npm.taobao.org/d3-array/download/d3-array-1.2.4.tgz#635ce4d5eea759f6f605863dbcfc30edc737f71f"
+
+"d3-array@^1.2.0 || 2":
+  version "2.0.3"
+  resolved "https://registry.npm.taobao.org/d3-array/download/d3-array-2.0.3.tgz#9c0531eda701e416f28a030e3d4e6179ba74f19f"
+
+d3-collection@1:
+  version "1.0.7"
+  resolved "https://registry.npm.taobao.org/d3-collection/download/d3-collection-1.0.7.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fd3-collection%2Fdownload%2Fd3-collection-1.0.7.tgz#349bd2aa9977db071091c13144d5e4f16b5b310e"
+
+d3-color@1:
+  version "1.2.3"
+  resolved "https://registry.npm.taobao.org/d3-color/download/d3-color-1.2.3.tgz#6c67bb2af6df3cc8d79efcc4d3a3e83e28c8048f"
+
+d3-format@1:
+  version "1.3.2"
+  resolved "https://registry.npm.taobao.org/d3-format/download/d3-format-1.3.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fd3-format%2Fdownload%2Fd3-format-1.3.2.tgz#6a96b5e31bcb98122a30863f7d92365c00603562"
+
+d3-interpolate@1, d3-interpolate@~1.3.0:
+  version "1.3.2"
+  resolved "https://registry.npm.taobao.org/d3-interpolate/download/d3-interpolate-1.3.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fd3-interpolate%2Fdownload%2Fd3-interpolate-1.3.2.tgz#417d3ebdeb4bc4efcc8fd4361c55e4040211fd68"
+  dependencies:
+    d3-color "1"
+
+d3-path@1:
+  version "1.0.7"
+  resolved "https://registry.npm.taobao.org/d3-path/download/d3-path-1.0.7.tgz#8de7cd693a75ac0b5480d3abaccd94793e58aae8"
+
+d3-scale-chromatic@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.npm.taobao.org/d3-scale-chromatic/download/d3-scale-chromatic-1.3.3.tgz#dad4366f0edcb288f490128979c3c793583ed3c0"
+  dependencies:
+    d3-color "1"
+    d3-interpolate "1"
+
+d3-scale@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/d3-scale/download/d3-scale-3.0.0.tgz#ddede1278ac3ea2bf3666de6ca625e20bed9b6c9"
+  dependencies:
+    d3-array "^1.2.0 || 2"
+    d3-format "1"
+    d3-interpolate "1"
+    d3-time "1"
+    d3-time-format "2"
+
+d3-scale@~2.1.0:
+  version "2.1.2"
+  resolved "https://registry.npm.taobao.org/d3-scale/download/d3-scale-2.1.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fd3-scale%2Fdownload%2Fd3-scale-2.1.2.tgz#4e932b7b60182aee9073ede8764c98423e5f9a94"
+  dependencies:
+    d3-array "^1.2.0"
+    d3-collection "1"
+    d3-format "1"
+    d3-interpolate "1"
+    d3-time "1"
+    d3-time-format "2"
+
+d3-shape@~1.2.0:
+  version "1.2.3"
+  resolved "https://registry.npm.taobao.org/d3-shape/download/d3-shape-1.2.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fd3-shape%2Fdownload%2Fd3-shape-1.2.3.tgz#3dad9b593e7297adac19b1f34a6821940968d7d6"
+  dependencies:
+    d3-path "1"
+
+d3-time-format@2:
+  version "2.1.3"
+  resolved "https://registry.npm.taobao.org/d3-time-format/download/d3-time-format-2.1.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fd3-time-format%2Fdownload%2Fd3-time-format-2.1.3.tgz#ae06f8e0126a9d60d6364eac5b1533ae1bac826b"
+  dependencies:
+    d3-time "1"
+
+d3-time@1:
+  version "1.0.11"
+  resolved "https://registry.npm.taobao.org/d3-time/download/d3-time-1.0.11.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fd3-time%2Fdownload%2Fd3-time-1.0.11.tgz#1d831a3e25cd189eb256c17770a666368762bbce"
+
 damerau-levenshtein@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.4.tgz#03191c432cb6eea168bb77f3a55ffdccb8978514"
@@ -3565,6 +3647,10 @@ decamelize@^2.0.0:
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-2.0.0.tgz#656d7bbc8094c4c788ea53c5840908c9c7d063c7"
   dependencies:
     xregexp "4.0.0"
+
+decimal.js-light@^2.4.1:
+  version "2.5.0"
+  resolved "https://registry.npm.taobao.org/decimal.js-light/download/decimal.js-light-2.5.0.tgz#ca7faf504c799326df94b0ab920424fdfc125348"
 
 decode-uri-component@^0.2.0:
   version "0.2.0"
@@ -3743,6 +3829,12 @@ dom-converter@~0.2:
   resolved "https://registry.yarnpkg.com/dom-converter/-/dom-converter-0.2.0.tgz#6721a9daee2e293682955b6afe416771627bb768"
   dependencies:
     utila "~0.4"
+
+dom-helpers@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.npm.taobao.org/dom-helpers/download/dom-helpers-3.4.0.tgz#e9b369700f959f62ecde5a6babde4bccd9169af8"
+  dependencies:
+    "@babel/runtime" "^7.1.2"
 
 dom-matches@>=1.0.1:
   version "2.0.0"
@@ -6360,7 +6452,7 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "~3.0.0"
 
-lodash.throttle@^4.0.0:
+lodash.throttle@^4.0.0, lodash.throttle@^4.1.1:
   version "4.1.1"
   resolved "http://registry.npm.taobao.org/lodash.throttle/download/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
 
@@ -6368,7 +6460,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@>4.17.4, "lodash@>=3.5 <5", lodash@^4.0.1, lodash@^4.13.1, lodash@^4.16.5, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0:
+lodash@>4.17.4, "lodash@>=3.5 <5", lodash@^4.0.1, lodash@^4.13.1, lodash@^4.16.5, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@~4.17.4, lodash@~4.17.5:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
@@ -6434,6 +6526,10 @@ map-visit@^1.0.0:
 material-colors@^1.2.1:
   version "1.2.6"
   resolved "http://registry.npm.taobao.org/material-colors/download/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
+
+math-expression-evaluator@^1.2.14:
+  version "1.2.17"
+  resolved "https://registry.npm.taobao.org/math-expression-evaluator/download/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
 
 math-random@^1.0.1:
   version "1.0.1"
@@ -8030,7 +8126,7 @@ prop-types@15.x, prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.4, pr
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
-prop-types@^15.6.2:
+prop-types@^15.6.2, prop-types@~15.6.0:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   dependencies:
@@ -8693,6 +8789,15 @@ react-redux@^6.0.1:
     prop-types "^15.7.2"
     react-is "^16.8.2"
 
+react-resize-detector@~2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npm.taobao.org/react-resize-detector/download/react-resize-detector-2.3.0.tgz#57bad1ae26a28a62a2ddb678ba6ffdf8fa2b599c"
+  dependencies:
+    lodash.debounce "^4.0.8"
+    lodash.throttle "^4.1.1"
+    prop-types "^15.6.0"
+    resize-observer-polyfill "^1.5.0"
+
 react-router-dom@^5.0.0:
   version "5.0.0"
   resolved "http://registry.npm.taobao.org/react-router-dom/download/react-router-dom-5.0.0.tgz#542a9b86af269a37f0b87218c4c25ea8dcf0c073"
@@ -8730,6 +8835,24 @@ react-slick@~0.23.2:
     lodash.debounce "^4.0.8"
     prettier "^1.14.3"
     resize-observer-polyfill "^1.5.0"
+
+react-smooth@~1.0.0:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/react-smooth/download/react-smooth-1.0.2.tgz#f7a2d932ece8db898646078c3c97f3e9533e0486"
+  dependencies:
+    lodash "~4.17.4"
+    prop-types "^15.6.0"
+    raf "^3.4.0"
+    react-transition-group "^2.5.0"
+
+react-transition-group@^2.5.0:
+  version "2.9.0"
+  resolved "https://registry.npm.taobao.org/react-transition-group/download/react-transition-group-2.9.0.tgz#df9cdb025796211151a436c69a8f3b97b5b07c8d"
+  dependencies:
+    dom-helpers "^3.4.0"
+    loose-envify "^1.4.0"
+    prop-types "^15.6.2"
+    react-lifecycles-compat "^3.0.4"
 
 react@^16.8.4:
   version "16.8.4"
@@ -8819,11 +8942,47 @@ realpath-native@^1.0.0:
   dependencies:
     util.promisify "^1.0.0"
 
+recharts-scale@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.npm.taobao.org/recharts-scale/download/recharts-scale-0.4.2.tgz#b66315d985cd9b80d5f7d977a5aab9a305abc354"
+  dependencies:
+    decimal.js-light "^2.4.1"
+
+recharts@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.npm.taobao.org/recharts/download/recharts-1.5.0.tgz#ecb4f015cec5b1284294954b7906c7c2ec6e25be"
+  dependencies:
+    classnames "~2.2.5"
+    core-js "~2.5.1"
+    d3-interpolate "~1.3.0"
+    d3-scale "~2.1.0"
+    d3-shape "~1.2.0"
+    lodash "~4.17.5"
+    prop-types "~15.6.0"
+    react-resize-detector "~2.3.0"
+    react-smooth "~1.0.0"
+    recharts-scale "^0.4.2"
+    reduce-css-calc "~1.3.0"
+
 recursive-readdir@2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/recursive-readdir/-/recursive-readdir-2.2.2.tgz#9946fb3274e1628de6e36b2f6714953b4845094f"
   dependencies:
     minimatch "3.0.4"
+
+reduce-css-calc@~1.3.0:
+  version "1.3.0"
+  resolved "https://registry.npm.taobao.org/reduce-css-calc/download/reduce-css-calc-1.3.0.tgz#747c914e049614a4c9cfbba629871ad1d2927716"
+  dependencies:
+    balanced-match "^0.4.2"
+    math-expression-evaluator "^1.2.14"
+    reduce-function-call "^1.0.1"
+
+reduce-function-call@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/reduce-function-call/download/reduce-function-call-1.0.2.tgz#5a200bf92e0e37751752fe45b0ab330fd4b6be99"
+  dependencies:
+    balanced-match "^0.4.2"
 
 redux-devtools-instrument@^1.9.0:
   version "1.9.6"
