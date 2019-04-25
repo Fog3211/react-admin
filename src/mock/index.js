@@ -14,6 +14,13 @@ import {
     gcalendar_option,
     sunburst_option
 } from "./data/echart";
+import {
+    area_data,
+    bar_data,
+    line_data,
+    radialbar_data,
+    scatter_data
+} from "./data/rechart";
 
 // 正则取get参数
 function getQueryByName(url, name) {
@@ -104,5 +111,21 @@ Mock.mock(/^\/get_echart_data/, 'get', () => {
     return {
         code: 1,
         data: echart_data
+    }
+})
+
+// 获取rechart_data数据
+Mock.mock(/^\/get_rechart_data/, 'get', () => {
+
+    const rechart_data = {
+        area: area_data,
+        bar: bar_data,
+        line: line_data,
+        radialbar: radialbar_data,
+        scatter: scatter_data
+    };
+    return {
+        code: 1,
+        data: rechart_data
     }
 })

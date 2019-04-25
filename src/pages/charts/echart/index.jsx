@@ -10,7 +10,13 @@ import './index.less';
 
 export default class Echart extends Component {
     state = {
-        all_data: {},
+        all_data: {
+            graph: {},
+            funnel: {},
+            map: {},
+            sunburst: {},
+            gcalendar: {},
+        },
     };
     componentWillMount() {
         Service.getEchartData().then((res) => {
@@ -35,26 +41,26 @@ export default class Echart extends Component {
                     </Col>
                     <Col md={12}>
                         <Card title="漏斗图" className="chart-box">
-                            <Funnel option={all_data.funnel}/>
+                            <Funnel option={all_data.funnel} />
                         </Card>
                     </Col>
                 </Row>
                 <Row gutter={16}>
                     <Col md={12}>
                         <Card title="地图图表" className="chart-box">
-                            <Map option={all_data.map}/>
+                            <Map option={all_data.map} />
                         </Card>
                     </Col>
                     <Col md={12}>
                         <Card title="旭日图" className="chart-box">
-                            <Sunburst option={all_data.sunburst}/>
+                            <Sunburst option={all_data.sunburst} />
                         </Card>
                     </Col>
                 </Row>
                 <Row gutter={16}>
                     <Col>
                         <Card title="日历坐标系" className="chart-box">
-                            <GCalendar option={all_data.gcalendar}/>
+                            <GCalendar option={all_data.gcalendar} />
                         </Card>
                     </Col>
                 </Row>

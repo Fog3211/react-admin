@@ -8,8 +8,8 @@ react后台管理系统，开发中ing
 [axios](https://github.com/axios/axios) : &nbsp;http请求模块  
 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) : &nbsp;按需引入组件，优化前端性能  
 [classnames](https://github.com/JedWatson/classnames) : &nbsp;简化React类名写法  
-[d3-scale](https://github.com/d3/d3-scale) : &nbsp;recharts的依赖项    
-[d3-scale-chromatic](https://github.com/d3/d3-scale-chromatic) : &nbsp;recharts的依赖项    
+[d3-scale](https://github.com/d3/d3-scale) : &nbsp;recharts的插件    
+[d3-scale-chromatic](https://github.com/d3/d3-scale-chromatic) : &nbsp;recharts的插件      
 [draft-js](https://github.com/facebook/draft-js) : &nbsp;富文本编辑器    
 [draftjs-to-html](https://github.com/jpuri/draftjs-to-html) : &nbsp;富文本转Html      
 [draftjs-to-markdown](https://github.com/jpuri/draftjs-to-markdown) : &nbsp;富文本转MarkDown     

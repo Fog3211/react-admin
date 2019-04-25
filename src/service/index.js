@@ -14,6 +14,9 @@ const Service = {
     },
     getEchartData(){
         return axios.get('/get_echart_data',).then(res => res.data);
+    },
+    getREchartData(){
+        return axios.get('/get_rechart_data',).then(res => res.data);
     }
 }
 export default Service;
