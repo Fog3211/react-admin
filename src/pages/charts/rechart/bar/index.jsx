@@ -35,7 +35,9 @@ export default class BarUI extends Component {
                         wrapperStyle={{ lineHeight: '40px' }}
                     />
                     <ReferenceLine y={0} stroke="#000" />
-                    <Brush dataKey="name" height={30} stroke="#8884d8" />
+                    {data.length && (
+                        <Brush dataKey="name" height={30} stroke="#8884d8" />
+                    )}
                     <Bar dataKey="pv" fill="#8884d8" />
                     <Bar dataKey="uv" fill="#82ca9d" />
                 </BarChart>

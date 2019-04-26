@@ -31,7 +31,6 @@ export default class Rechart extends Component {
     }
     render() {
         const { all_data } = this.state;
-        console.log(all_data);
         return (
             <div>
                 <Row gutter={16}>
@@ -42,7 +41,7 @@ export default class Rechart extends Component {
                     </Col>
                     <Col md={12}>
                         <Card title="柱状图" className="chart-box">
-                            {/* <Bar data={all_data.bar} /> */}
+                            <Bar data={all_data.bar} />
                         </Card>
                     </Col>
                     <Col md={12}>
