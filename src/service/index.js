@@ -17,6 +17,9 @@ const Service = {
     },
     getREchartData(){
         return axios.get('/get_rechart_data',).then(res => res.data);
+    },
+    getHomeData(){
+        return axios.get('/get_home_data',).then(res => res.data);
     }
 }
 export default Service;

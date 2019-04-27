@@ -21,6 +21,11 @@ import {
     radialbar_data,
     scatter_data
 } from "./data/rechart";
+import {
+    tag_data,
+    visits_data,
+    age_option
+} from "./data/home";
 
 // 正则取get参数
 function getQueryByName(url, name) {
@@ -127,5 +132,18 @@ Mock.mock(/^\/get_rechart_data/, 'get', () => {
     return {
         code: 1,
         data: rechart_data
+    }
+})
+// 获取主页数据
+Mock.mock(/^\/get_home_data/, 'get', () => {
+
+    const home_data = {
+        tag: tag_data,
+        visits: visits_data,
+        age:age_option
+    };
+    return {
+        code: 1,
+        data: home_data
     }
 })

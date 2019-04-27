@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
-import { Statistic,Icon } from 'antd';
+import { Icon } from 'antd';
+import CountUp from 'react-countup';
 import './index.less';
 
 export default class TagCard extends Component {
     render() {
+        const data = this.props.data || {};
         return (
             <div className="tag-card">
-                <div className="icon-box">
-                    <Icon type="team" className="icon"/>
+                <div
+                    className="icon-box"
+                    style={{ backgroundColor: data.color }}
+                >
+                    <Icon type={data.icon || 'team'} className="icon" />
                 </div>
                 <div className="info-box">
-                    {/* <h1 className="count">212</h1> */}
-                    <Statistic title="Active Users" value={112893} />
-                    <p className="info">销售总额</p>
+                    <CountUp
+                        className="count"
+                        end={data.count || 0}
+                        duration={2}
+                    />
+                    <p className="info">{data.info}</p>
                 </div>
             </div>
         );

@@ -18,7 +18,8 @@ react后台管理系统，开发中ing
 [less](https://github.com/less/less.js) : &nbsp;css预处理器       
 [mockjs](http://mockjs.com/) : &nbsp;模拟生成数据，拦截登录等  
 [nprogress](https://github.com/rstacruz/nprogress) : &nbsp;加载进度条    
-[photoswipe](https://github.com/dimsemenov/photoswipe) : &nbsp;图片弹层查看插件  
+[photoswipe](https://github.com/dimsemenov/photoswipe) : &nbsp;图片弹层查看插件 
+[prop-types](https://github.com/facebook/prop-types) : &nbsp;props属性类型检查    
 [react-color](https://github.com/casesandberg/react-color) : &nbsp;调色板组件   
 [react-draft-wysiwyg](https://github.com/jpuri/react-draft-wysiwyg) : &nbsp;富文本组件   
 [react-draggable](https://github.com/mzabriskie/react-draggable) : &nbsp;React拖拽插件     
