@@ -3,7 +3,10 @@ import ReactEcharts from 'echarts-for-react';
 
 export default class Funnel extends Component {
     render() {
-        const option = this.props.option || {};
+        const option = this.props.option || {
+            series: [],
+            data: [],
+        };
         return (
             <ReactEcharts
                 ref={(e) => {

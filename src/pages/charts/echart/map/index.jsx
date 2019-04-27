@@ -4,7 +4,10 @@ import 'echarts/map/js/china.js';
 
 export default class Map extends Component {
     render() {
-        const option = this.props.option || {};
+        const option = this.props.option || {
+            series: [],
+            data: [],
+        };
         return (
             <ReactEcharts
                 option={option}
