@@ -26,11 +26,11 @@ export default class Sunburst extends Component {
             myChart.resize({
                 width: dom.clientWidth,
             });
-            window.onresize = () => {
+            window.addEventListener('resize', () => {
                 myChart.resize({
                     width: dom.clientWidth,
                 });
-            };
+            });
         }
 
         return (

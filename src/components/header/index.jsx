@@ -7,13 +7,13 @@ import { withRouter } from 'react-router-dom';
 import './index.less';
 import avater from '@/assets/head.png';
 import logo from '@/assets/logo.svg';
- 
+
 const { Header } = Layout;
 const SubMenu = Menu.SubMenu;
 
 class MyHeader extends Component {
     state = {
-        visible: false
+        visible: false,
     };
     handleVisibleChange = (visible) => {
         this.setState({ visible });
@@ -28,13 +28,11 @@ class MyHeader extends Component {
             screenfull.toggle();
         }
     };
-    logOut=()=>{
+    logOut = () => {
         sessionStorage.removeItem('userName');
-    }
+    };
     render() {
-        const {
-            responsive = { data: {} },
-        } = this.props;
+        const { responsive = { data: {} } } = this.props;
         const { visible } = this.state;
         return (
             <Header className="header">
@@ -56,19 +54,17 @@ class MyHeader extends Component {
                         />
                     </Popover>
                 ) : (
-                        <span className="logo-box">
-                            <img src={logo} alt="logo" className="logo" />
-                            <span>React-Admin</span>
-                        </span>
+                    <span className="logo-box">
+                        <img src={logo} alt="logo" className="logo" />
+                        <span>React-Admin</span>
+                    </span>
                 )}
                 <Menu mode="horizontal" className="header-menu">
                     <Menu.Item key="full" onClick={this.toggleScreenFull}>
                         <Icon type="fullscreen" className="full-btn" />
                     </Menu.Item>
 
-                    {responsive.data.isMobile ? (
-                        ''
-                    ) : (
+                    {responsive.data.isMobile && (
                         <Menu.Item key="welcome">
                             <span className="welcome">
                                 你好 - {this.props.user.userName}
@@ -81,7 +77,9 @@ class MyHeader extends Component {
                     >
                         <Menu.Item key="setting">个人信息</Menu.Item>
                         <Menu.Item key="logout">
-                           <Link to="/login" onClick={this.logOut}>退出登录</Link>
+                            <Link to="/login" onClick={this.logOut}>
+                                退出登录
+                            </Link>
                         </Menu.Item>
                     </SubMenu>
                 </Menu>
@@ -90,5 +88,4 @@ class MyHeader extends Component {
     }
 }
 
-// export default withRouter(connectAlita(['responsive'])(MyHeader));
 export default withRouter(MyHeader);

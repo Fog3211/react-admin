@@ -6,7 +6,7 @@ const renderMenuItem = item => (
     <Menu.Item
         key={item.key}
     >
-        <Link to={ item.key}>   
+        <Link to={ item.key}>    
             {item.icon && <Icon type={item.icon} />}
             <span className="nav-text">{item.title}</span>
         </Link>
