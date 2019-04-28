@@ -42,5 +42,6 @@ react后台管理系统，开发中ing
 富文本功能无法上传预览图片（[imgur](https://api.imgur.com/3/image)接口不可用）  
 旭日图图表子节点太复杂无法模拟生成数据 
 ## 感谢
+蚂蚁金服的组件库[Ant Design](https://ant.design/index-cn)  
 yezihaohao开源的[react-admin](https://github.com/yezihaohao/react-admin)项目  
 Ciwing·Jon提供的[漫威头像图标](https://www.iconfont.cn/collections/detail?cid=15515)

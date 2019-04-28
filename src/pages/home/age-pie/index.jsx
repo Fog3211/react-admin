@@ -36,7 +36,7 @@ export default class Sunburst extends Component {
         return (
             <div
                 ref="agepie"
-                style={{ height: '400px' }}
+                style={{ height: '430px' }}
                 className="react_for_echarts"
             />
         );

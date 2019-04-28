@@ -1,6 +1,7 @@
 import tag_data from "./tag";
 import visits_data from "./visits";
 import age_data from "./age";
+import dynamic_data from "./dynamic";
 
 const age_option = {
     title: {
@@ -30,5 +31,6 @@ const age_option = {
 export {
     tag_data,
     visits_data,
-    age_option
+    age_option,
+    dynamic_data
 };

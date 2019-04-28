@@ -11,7 +11,8 @@ export default class Home extends Component {
         all_data: {
             tag: [],
             visits: [],
-            age:{}
+            age:{},
+            dynamic:[]
         },
     };
     componentWillMount() {
@@ -46,7 +47,7 @@ export default class Home extends Component {
                     </Col>
                     <Col md={16}>
                         <Card title="动态">
-                            <Dynamic/>
+                            <Dynamic data={all_data.dynamic}/>
                         </Card>
                     </Col>
                 </Row>

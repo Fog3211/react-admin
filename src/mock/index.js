@@ -24,7 +24,8 @@ import {
 import {
     tag_data,
     visits_data,
-    age_option
+    age_option,
+    dynamic_data
 } from "./data/home";
 
 // 正则取get参数
@@ -140,7 +141,8 @@ Mock.mock(/^\/get_home_data/, 'get', () => {
     const home_data = {
         tag: tag_data,
         visits: visits_data,
-        age:age_option
+        age: age_option,
+        dynamic: dynamic_data
     };
     return {
         code: 1,
