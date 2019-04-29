@@ -75,7 +75,6 @@ class Login extends Component {
                                         message: '用户名长度为3~10位',
                                     },
                                     {
-                                        //   pattern:/^\w+$/g,
                                         pattern: new RegExp('^\\w+$', 'g'),
                                         message: '正则不匹配',
                                     },

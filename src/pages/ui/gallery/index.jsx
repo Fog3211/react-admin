@@ -65,7 +65,7 @@ export default class Gallery extends Component {
 					<div>
 						<img
 							onClick={() => this.openGallery(v2.url)} //不能直接调用
-							alt="img"
+							alt={v2.info}
 							width="100%"
 							src={v2.url}
 							className="img-show"

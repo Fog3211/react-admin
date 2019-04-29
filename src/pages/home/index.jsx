@@ -41,7 +41,7 @@ export default class Home extends Component {
 					{all_data.tag.map((item, index) => {
 						return (
 							<Col md={6} key={index}>
-								<TagCard data={item} />
+								<TagCard data={item}/>
 							</Col>
 						);
 					})}

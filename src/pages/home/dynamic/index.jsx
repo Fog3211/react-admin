@@ -15,7 +15,7 @@ export default class Dynamic extends Component {
                 renderItem={(item) => (
                     <List.Item key={item.name} extra={<span>{item.time}</span>}>
                         <List.Item.Meta
-                            avatar={<Avatar src={item.avatar} />}
+                            avatar={<Avatar src={item.avatar} alt={item.avatar}/>}
                             title={item.name}
                         />
                         {item.content}
