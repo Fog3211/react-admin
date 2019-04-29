@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import menus from '@/router/config';
 import SiderMenu from './SiderMenu';
 
-
 class SiderCustom extends Component {
     static setMenuOpen = (props) => {
         const { pathname } = props.location;
@@ -34,13 +33,14 @@ class SiderCustom extends Component {
         });
     };
     render() {
+        const { selectedKey, openKey } = this.state;
         return (
             <SiderMenu
                 menus={menus}
                 onClick={this.menuClick}
-                selectedKeys={[this.state.selectedKey]}
+                selectedKeys={[selectedKey]}
                 mode="inline"
-                openKeys={[this.state.openKey]}
+                openKeys={[openKey]}
                 onOpenChange={this.openMenu}
             />
         );
