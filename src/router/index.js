@@ -21,7 +21,9 @@ export default class CRouter extends Component {
     };
     render() {
         const {
+            auth = {data: {}},
             responsive = {data: {}},
+            onRouterChange
           } = this.props;
         return (
             <Switch>
@@ -36,10 +38,11 @@ export default class CRouter extends Component {
                                     key={r.key}
                                     path={r.key}
                                     render={() => {
+                                        onRouterChange && onRouterChange(r);
                                         return (<div>
                                             {/* 面包屑标题导航 */}
                                             <BreadcrumbCustom first={(first_title?first_title:r.title)==='首页'?'':(first_title?first_title:r.title)} second={first_title?r.title:''} />
-                                            <Page responsive={responsive}/>
+                                            <Page responsive={responsive} auth={auth}/>
                                         </div>);
                                     }}
                                 />

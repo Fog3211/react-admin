@@ -16,6 +16,8 @@ import DrawerUI from '_p/ui/drawer';
 import Gallery from '_p/ui/gallery';
 import Echart from '_p/charts/echart';
 import Rechart from '_p/charts/rechart';
+import BasicAuth from '_p/auth/basic-auth';
+import RouterAuth from '_p/auth/router-auth';
 
 export default {
     Home,
@@ -35,5 +37,7 @@ export default {
     DrawerUI,
     Gallery,
     Echart,
-    Rechart
+    Rechart,
+    BasicAuth,
+    RouterAuth
 }

@@ -1,15 +1,14 @@
 const menus = [{
         key: '/app/home',
         title: '首页',
-        icon: 'mobile',
+        icon: 'home',
         component: 'Home'
     },
     {
         key: '/app/ui',
         title: 'UI',
         icon: 'scan',
-        subs: [
-            {
+        subs: [{
                 key: '/app/ui/icons',
                 title: '图标',
                 component: 'Icons'
@@ -70,7 +69,7 @@ const menus = [{
     {
         key: '/app/table',
         title: '表格',
-        icon: 'copy',
+        icon: 'table',
         subs: [{
                 key: '/app/table/basic-table',
                 title: '基础表格',
@@ -96,7 +95,7 @@ const menus = [{
     {
         key: '/app/form',
         title: '表单',
-        icon: 'edit',
+        icon: 'form',
         component: 'AllForm'
     },
     {
@@ -117,18 +116,17 @@ const menus = [{
     },
     {
         key: '/app/auth',
-        title: '权限管理',
-        icon: 'safety',
+        title: '权限测试',
+        icon: 'lock',
         subs: [{
-                key: '/app/auth/basic',
-                title: '基础演示',
-                component: 'AuthBasic'
+                key: '/app/auth/basic-test',
+                title: '基本测试',
+                component: 'BasicAuth'
             },
             {
-                key: '/app/auth/routerEnter',
+                key: '/app/auth/router-test',
                 title: '路由拦截',
-                component: 'RouterEnter',
-                auth: 'auth/testPage'
+                component: 'RouterAuth'
             },
         ],
     },

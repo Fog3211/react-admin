@@ -38,11 +38,13 @@ function getQueryByName(url, name) {
 //登录
 Mock.mock('/login', 'post', (params) => {
     let user = JSON.parse(params.body);
+    let auth = 'guest';//默认是游客权限
     let has_user = false;
     let can_login = user_list.some((item) => {
         if (item.userName === user.userName) {
             has_user = true;
             if (item.passWord === user.passWord) {
+                auth = item.auth;
                 return true;
             }
         }
@@ -57,6 +59,7 @@ Mock.mock('/login', 'post', (params) => {
     if (can_login) {
         return {
             resCode: 1,
+            auth: auth,
             msg: '登录成功',
         }
     } else {

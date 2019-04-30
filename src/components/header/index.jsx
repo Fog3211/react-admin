@@ -67,7 +67,8 @@ class MyHeader extends Component {
                     {responsive.data.isMobile && (
                         <Menu.Item key="welcome">
                             <span className="welcome">
-                                你好 - {this.props.user.userName}
+                                你好 - 
+                                {/* {this.props.user.userName} */}
                             </span>
                         </Menu.Item>
                     )}

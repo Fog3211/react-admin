@@ -1,8 +1,15 @@
-import { combineReducers } from 'redux';
+import {
+    combineReducers
+} from 'redux';
 
 const responsive = {
     data: {
         isMobile: false
+    }
+}
+const auth = {
+    data: {
+        auth: 'guest'
     }
 }
 const responsiveReducer = (state = responsive, action) => {
@@ -19,8 +26,22 @@ const responsiveReducer = (state = responsive, action) => {
             return state;
     }
 }
+const authReducer = (state = auth, action) => {
+    let newState = Object.assign({}, state);
+    switch (action.type) {
+        case 'auth':
+            {
+                const auth = action.auth;
+                newState.data.auth = auth;
+                return newState;
+            }
+        default:
+            return state;
+    }
+}
 const allReducers = {
-    responsive: responsiveReducer
+    responsive: responsiveReducer,
+    auth: authReducer
 }
 const rootReducer = combineReducers(allReducers);
 export default rootReducer;
