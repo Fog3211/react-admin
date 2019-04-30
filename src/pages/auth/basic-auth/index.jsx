@@ -29,8 +29,8 @@ export default class BasicAuth extends Component {
 		return (
 			<Spin spinning={global_loading} size="large">
 				<Card title="权限信息">
-					<h1 style={{ fontSize: 30, height: 500, lineHeight: '500px' }} className="center">
-						您的身份权限是： {this.authCheck(auth.data.auth)}
+					<h1 style={{ fontSize: 20, height: 200, marginTop: '100px' }} className="center">
+						您的权限是： {this.authCheck(auth.data.auth)}
 					</h1>
 				</Card>
 			</Spin>

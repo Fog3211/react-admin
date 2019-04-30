@@ -41,7 +41,7 @@ class Login extends Component {
 					}
 				});
 			} else {
-				message.error(`尴尬，登录失败`);
+				message.error('尴尬，登录失败');
 			}
 		});
 	};

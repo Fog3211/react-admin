@@ -16,7 +16,7 @@ export default class RouterAuth extends Component {
 		return (
 			<Spin spinning={global_loading} size="large">
 				<Card>
-					<h1 style={{ fontSize: 30, height: 500, lineHeight: '500px' }} className="center">
+					<h1 style={{ fontSize: 20, height: 200, marginTop: '100px' }} className="center">
 						只有该系统用户才可以看到此页面，游客访问会跳转404页面
 					</h1>
 				</Card>

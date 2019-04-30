@@ -126,7 +126,8 @@ const menus = [{
             {
                 key: '/app/auth/router-test',
                 title: '路由拦截',
-                component: 'RouterAuth'
+                component: 'RouterAuth',
+                auth: ['super_admin','admin']
             },
         ],
     },
