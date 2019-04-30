@@ -6,7 +6,7 @@ react后台管理系统 : [预览地址]()
 
 ## 介绍
 
-&nbsp; &nbsp; 本项目基于`React`16.x开发，使用了大量Antd组件，可用做一般的后台管理系统，支持移动端。  
+&nbsp; &nbsp; 本项目基于`React`16.x开发，使用了大量Antd组件，可用做一般的后台管理系统，支持移动端，兼容所有主流浏览器。  
 
 > 总体技术栈为: React16.x + React-Router4.x + Redux + ES6 + Less + mockjs + axios。
 
@@ -34,18 +34,18 @@ react后台管理系统 : [预览地址]()
 
 ![avatar](https://img.fog3211.com/8U6EY4W5$I]6F`32_PWGN.png)  
 ![avatar](https://img.fog3211.com/{X1[XT}S~R613WHG1GLC5.png)  
-![avatar](https://img.fog3211.com/~7QZN39H{S2%HX]A78{`OAE.png)  
-![avatar](https://img.fog3211.com/~HS]BR{VO80FZ@4K5%8SZK.png)  
-![avatar](https://img.fog3211.com/~RGK7[$YHP9]EBCCQ%%GCC.png)  
-![avatar](https://img.fog3211.com/Q]`WULP}S5W%ID72NXLPPJ.png)  
+![avatar](https://img.fog3211.com/~7QZN39H%7BS2%25HX%5DA78%7B%60OAE.png)  
+![avatar](https://img.fog3211.com/~HS%5DBR%7BVO80FZ@4K5%258SZK.png)  
+![avatar](https://img.fog3211.com/~RGK7%5B$YHP9%5DEBCCQ%25%25GCC.png)  
+![avatar](https://img.fog3211.com/Q%5D%60WULP%7DS5W%25ID72NXLPPJ.png)  
 ![avatar](https://img.fog3211.com/OM}20NJQG}_[RKSJ6G1W1R8.png)  
-![avatar](https://img.fog3211.com/G5A9L%N~WJ65{AX%ZSQQVE.png)  
+![avatar](https://img.fog3211.com/G5A9L%25N~WJ65%7BAX%25ZSQQVE.png)  
 ![avatar](https://img.fog3211.com/OF`6Y7$Q65WAS]F}RVDHWQ.png)  
 ![avatar](https://img.fog3211.com/JB}D3VW_NRQX}LVOL80H[GG.png)  
 ![avatar](https://img.fog3211.com/ZJ5$7~P6QJ_}4C_`K@@N$HS.png)  
 ![avatar](https://img.fog3211.com/WBYGPWV@4Q4KRXVW08SNZQU.png)  
 ![avatar](https://img.fog3211.com/AXH5WZ7TQRS0BP~E5WKN~I.png)  
-![avatar](https://img.fog3211.com/2O83BZ159_W%8J1SAYCCF.png)  
+![avatar](https://img.fog3211.com/2O83BZ159_W%258J1SAYCCF.png)  
 
 ## 相关依赖
 
