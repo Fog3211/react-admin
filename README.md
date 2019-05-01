@@ -1,8 +1,9 @@
 
 # React-admin
 
-react后台管理系统 : [预览地址]()  
+react后台管理系统 : [预览地址](https://fog3211.com/react-admin/build)  
 扫码预览  
+![avatar](https://img.fog3211.com/1556718573.png)  
 
 ## 介绍
 
